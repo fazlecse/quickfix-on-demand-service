@@ -14,32 +14,97 @@ if ($("nav").length) {
 }
 
 $(document).ready(function () {
-  // Hero slider start
-  if ($(".hero-swiper").length) {
-    var swiper = new Swiper(".hero-swiper", {
-      preloadImages: false,
-      loop: true,
-      centeredSlides: false,
-      resistance: true,
-      resistanceRatio: 0.6,
-      speed: 2400,
-      spaceBetween: 0,
-      parallax: false,
-      effect: "fade",
-      // autoplay: false,
-      autoplay: {
-        delay: 7000,
-        disableOnInteraction: false,
+  // category carousel start
+  $(".category-carousel").owlCarousel({
+    // loop: true,
+    // autoplay: true,
+    margin: 30,
+    autoplayTimeout: 2000,
+    // nav: false,
+    // rtl: true,
+    navText: [
+      "<i class='fa-regular fa-arrow-left-long'></i>",
+      "<i class='fa-regular fa-arrow-right-long'></i>",
+    ],
+    // rtl: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true,
+        dots: false,
+        dotsEach: 3,
       },
-      pagination: {
-        el: ".swiper-pagination",
+      375: {
+        items: 1,
+        nav: true,
+        dots: false,
+        dotsEach: 2,
       },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      768: {
+        items: 2,
+        nav: true,
+        dots: false,
+        margin: 15,
       },
-    });
-  }
+      992: {
+        items: 2,
+        nav: true,
+        dots: false,
+      },
+      1400: {
+        items: 6,
+        nav: true,
+        dots: false,
+      },
+    },
+  });
+  // category carousel end
+
+  // product carousel start
+  $(".product-carousel").owlCarousel({
+    // loop: true,
+    // autoplay: true,
+    margin: 30,
+    autoplayTimeout: 2000,
+    // nav: false,
+    // rtl: true,
+    navText: [
+      "<i class='fa-regular fa-arrow-left-long'></i>",
+      "<i class='fa-regular fa-arrow-right-long'></i>",
+    ],
+    // rtl: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true,
+        dots: false,
+        dotsEach: 3,
+      },
+      375: {
+        items: 1,
+        nav: true,
+        dots: false,
+        dotsEach: 2,
+      },
+      768: {
+        items: 2,
+        nav: true,
+        dots: false,
+        margin: 15,
+      },
+      992: {
+        items: 3,
+        nav: true,
+        dots: false,
+      },
+      1400: {
+        items: 4,
+        nav: true,
+        dots: false,
+      },
+    },
+  });
+  // product carousel end
 
   // cmn select2 start
   $(".cmn-select2").select2();

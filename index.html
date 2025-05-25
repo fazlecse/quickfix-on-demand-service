@@ -107,7 +107,7 @@
         <p class="subtitle mt-10">All your service needs in one convenient place — available anytime.</p>
       </div>
       <div class="search-box-wrapper mt-20">
-        <button type="button" class="location-btn">
+        <button type="button" class="location-btn" data-bs-toggle="modal" data-bs-target="#location-modal">
           <i class="fa-solid fa-location-dot"></i>
           <div class="text">Uttara</div>
         </button>
@@ -213,6 +213,131 @@
   </section>
   <!-- Hero section end -->
 
+  <!-- Category section start -->
+  <section class="category-section">
+    <div class="container">
+      <div class="category-section-inner">
+        <div class="owl-carousel owl-theme category-carousel">
+
+          <div class="item">
+            <a href="" class="category-box">
+              <div class="img-box">
+                <img src="./assets/img/category/air-conditioner.png" alt="">
+              </div>
+              <div class="text-box">
+                <div class="title">AC Repair Services</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="" class="category-box">
+              <div class="img-box">
+                <img src="./assets/img/category/washing-machine.png" alt="">
+              </div>
+              <div class="text-box">
+                <div class="title">Appliance Repair</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="" class="category-box">
+              <div class="img-box">
+                <img src="./assets/img/category/cleaning.png" alt="">
+              </div>
+              <div class="text-box">
+                <div class="title">Cleaning Solution</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="" class="category-box">
+              <div class="img-box">
+                <img src="./assets/img/category/mesotherapy.png" alt="">
+              </div>
+              <div class="text-box">
+                <div class="title">Beauty & Wellness</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="" class="category-box">
+              <div class="img-box">
+                <img src="./assets/img/category/moving.png" alt="">
+              </div>
+              <div class="text-box">
+                <div class="title">Shifting</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="" class="category-box">
+              <div class="img-box">
+                <img src="./assets/img/category/salon.png" alt="">
+              </div>
+              <div class="text-box">
+                <div class="title">Men's Care & Salon</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="" class="category-box">
+              <div class="img-box">
+                <img src="./assets/img/category/hospital-building.png" alt="">
+              </div>
+              <div class="text-box">
+                <div class="title">Health & Care</div>
+              </div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="" class="category-box">
+              <div class="img-box">
+                <img src="./assets/img/category/menu.png" alt="">
+              </div>
+              <div class="text-box">
+                <div class="title">All services</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Category section end -->
+
+  <!-- Top service provider section -->
+  <section class="top-service-provider-section">
+    <div class="container">
+      <h4>Top service provider</h4>
+      <div class="owl-carousel owl-theme product-carousel">
+
+        <!-- <div class="item"> -->
+          <a href="" class="product-box">
+            <div class="img-box">
+              <img src="./assets/img/product/1733298388_acdoctor.jpg" alt="">
+            </div>
+            <div class="text-box">
+              <div class="name">Adedayo Christian</div>
+              <div class="description">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, officia.
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- Top service provider end -->
+
 
 
   <!-- Footer Section start -->
@@ -315,6 +440,123 @@
     </div>
   </section> -->
   <!-- Footer Section end -->
+
+  <!-- Modal section start -->
+  <div class="modal fade location-modal" id="location-modal" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <button type="button" class="back-btn"><i class="fa-regular fa-angle-left"></i> back</button>
+          <h5 class="modal-title" id="staticBackdropLabel">
+            Select Country
+          </h5>
+          <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-light fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="d-flex gap-3 px-4 py-3">
+            <div class="search-box3 flex-grow-1" id="search-box2">
+              <input type="text" id="search-input" class="form-control" placeholder="Search area">
+              <div class="search-btn">
+                <i class="far fa-search"></i>
+              </div>
+            </div>
+            <a class="cmn-btn3" href="">
+              <div class="btn-wrapper">
+                <div class="main-text btn-single">
+                  <i class="fa-solid fa-location-crosshairs"></i> Current location
+                </div>
+                <div class="hover-text btn-single">
+                  <i class="fa-solid fa-location-crosshairs"></i> Current location
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="country-flags-container px-4 py-3 pt-0">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/bd.png" alt="">
+                  <span>Bangladesh</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/ng.png" alt="">
+                  <span>nigeria</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/pk.png" alt="">
+                  <span>pakistan</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/in.png" alt="">
+                  <span>india</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/gh.png" alt="">
+                  <span>ghana</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/ke.png" alt="">
+                  <span>Kenya</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Dhaka</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Rangpur</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Rajshahi</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Khulna</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Barishal</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Chattogram</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal section end -->
 
 
   <!-- Jquery Js link -->
