@@ -18,13 +18,13 @@ $(document).ready(function () {
   $(".category-carousel").owlCarousel({
     // loop: true,
     // autoplay: true,
-    margin: 30,
+    margin: 20,
     autoplayTimeout: 2000,
     // nav: false,
     // rtl: true,
     navText: [
-      "<i class='fa-regular fa-arrow-left-long'></i>",
-      "<i class='fa-regular fa-arrow-right-long'></i>",
+      "<i class='fa-regular fa-angle-left'></i>",
+      "<i class='fa-regular fa-angle-right'></i>",
     ],
     // rtl: true,
     responsive: {
@@ -59,52 +59,6 @@ $(document).ready(function () {
     },
   });
   // category carousel end
-
-  // product carousel start
-  $(".product-carousel").owlCarousel({
-    // loop: true,
-    // autoplay: true,
-    margin: 30,
-    autoplayTimeout: 2000,
-    // nav: false,
-    // rtl: true,
-    navText: [
-      "<i class='fa-regular fa-arrow-left-long'></i>",
-      "<i class='fa-regular fa-arrow-right-long'></i>",
-    ],
-    // rtl: true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: true,
-        dots: false,
-        dotsEach: 3,
-      },
-      375: {
-        items: 1,
-        nav: true,
-        dots: false,
-        dotsEach: 2,
-      },
-      768: {
-        items: 2,
-        nav: true,
-        dots: false,
-        margin: 15,
-      },
-      992: {
-        items: 3,
-        nav: true,
-        dots: false,
-      },
-      1400: {
-        items: 4,
-        nav: true,
-        dots: false,
-      },
-    },
-  });
-  // product carousel end
 
   // cmn select2 start
   $(".cmn-select2").select2();
