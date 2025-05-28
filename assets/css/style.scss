@@ -324,12 +324,12 @@ figure {
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 160px;
   min-width: 120px;
 }
 
 .footer-logo {
-  max-width: 150px;
+  max-width: 160px;
   min-width: 120px;
 }
 
@@ -6506,7 +6506,6 @@ height end
 ----------------------------------------------*/
 .navbar.active {
   background-color: rgb(var(--white));
-  box-shadow: var(--shadow1);
   z-index: 999;
 
   .navbar-nav {
@@ -6541,6 +6540,7 @@ height end
   padding: 10px;
   z-index: 999;
   background-color: rgb(var(--white));
+  box-shadow: var(--shadow2);
 
   .container {
     position: relative;
@@ -6844,13 +6844,12 @@ Category section end
 00. Products section section start
 ----------------------------------------------*/
 .product-box {
-  overflow: hidden;
-  background-color: rgb(var(--white));
-  border: 1px solid var(--border-color1);
+  // overflow: hidden;
+  // border: 1px solid var(--border-color1);
   display: block;
-  padding: 5px;
-  border-radius: 12px;
-  background-color: var(--bg-color2);
+  // padding: 5px;
+  // border-radius: 12px;
+  // background-color: var(--bg-color2);
 
   &:hover {
     .img-box {
@@ -6864,12 +6863,14 @@ Category section end
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    aspect-ratio: 3/2;
+    box-shadow: var(--shadow2);
 
     img {
       transition: var(--transition);
       object-fit: cover;
       width: 100%;
-      height: auto;
+      height: 100%;
       border-radius: 10px;
     }
   }
@@ -6885,6 +6886,12 @@ Category section end
       font-weight: 600;
       color: rgb(var(--heading-color));
       text-transform: capitalize;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
     }
 
     .location {
@@ -6905,7 +6912,7 @@ Category section end
 
     .price-title {
       color: rgb(var(--primary-color));
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
       font-family: var(--heading-font);
     }
@@ -6939,22 +6946,48 @@ Category section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-05. Why choose us section start
+05. All service section start
 ----------------------------------------------*/
-.why-choose-us-section {
-  background-color: var(--bg-color2);
+.service-category-section {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
 
-  .right-side {
-    .img-box {
-      img {
-        border-radius: 15px;
-      }
+.sidebar {
+  position: sticky;
+  top: 90px;
+  transition: var(--transition);
+  background-color: rgb(var(--white));
+  border-right: 1px solid var(--border-color2);
+}
+
+.sidebar-nav {
+  .nav-item{
+    margin-bottom: 2px;
+  }
+  .nav-link {
+    padding: 15px 10px;
+    border-right: 5px solid transparent;
+    font-size: 16px;
+    color: rgb(var(--heading-color));
+    font-family: var(--heading-font);
+    line-height: 1.3;
+    font-weight: 600;
+    display: block;
+    transition: var(--transition);
+
+    &.active {
+     border-right: 5px solid rgb(var(--primary-color));
+    }
+    &.active, &:hover {
+      background-color: rgb(var(--primary-color), 0.1);
     }
   }
 }
 
 /*----------------------------------------------
-Why choose us section end
+All service section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -7466,173 +7499,6 @@ Blog details end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-12. Newsletter section start
-----------------------------------------------*/
-.newsletter-section {
-  position: relative;
-  z-index: 1;
-
-  .newsletter-section-inner {
-    background-color: rgb(var(--primary-color));
-    padding: 50px;
-    border-radius: 15px;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-
-    .shape {
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: -1;
-      opacity: 0.2;
-    }
-  }
-
-  .content-area {
-    font-family: var(--heading-font);
-    color: rgb(var(--white));
-    text-transform: uppercase;
-    line-height: 40px;
-    font-weight: 500;
-
-
-    .subscribe-small-text {
-      font-size: 22px;
-    }
-
-    .subscribe-normal-text {
-      font-size: 36px;
-      font-weight: 600;
-      margin-bottom: 0;
-      color: rgb(var(--white));
-    }
-  }
-
-  .newsletter-form {
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    .form-control {
-      border-radius: 9999px;
-      height: 55px;
-      background-color: rgb(var(--white));
-      padding: 10px 165px 10px 20px;
-      border-color: rgb(var(--primary-color), 0.1);
-
-      &:focus {
-        border-color: rgb(var(--primary-color));
-      }
-    }
-
-    .subscribe-btn {
-      transition: var(--transition);
-      position: absolute;
-      right: 5px;
-      background-color: rgb(var(--heading-color));
-      height: calc(100% - 10px);
-      border-radius: 9999px;
-      padding: 10px 40px;
-      color: rgb(var(--white));
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-
-      &:hover {
-        background-color: rgb(var(--primary-color));
-        color: rgb(var(--white));
-      }
-    }
-  }
-}
-
-// Responsive neswletter section start
-@media (max-width: 991px) {
-  .newsletter-section {
-    .newsletter-section-inner {
-      padding: 50px;
-    }
-
-    .content-area {
-      .subscribe-small-text {
-        font-size: 20px;
-      }
-
-      .subscribe-normal-text {
-        font-size: 28px;
-      }
-    }
-
-    .newsletter-form {
-      .subscribe-btn {
-        padding: 10px 15px;
-      }
-
-      .form-control {
-        padding: 10px 110px 10px 10px;
-      }
-    }
-  }
-
-}
-
-@media (max-width: 767px) {
-  .newsletter-section .content-area {
-    text-align: center;
-  }
-}
-
-@media (max-width: 575px) {
-  .newsletter-section {
-    .newsletter-section-inner {
-      padding: 20px;
-    }
-
-    .newsletter-form .form-control {
-      height: 50px;
-    }
-  }
-
-}
-
-// Responsive neswletter section end
-// Rtl newsletter section start 
-.rtl {
-  .newsletter-section .newsletter-form {
-    .form-control {
-      padding: 10px 20px 10px 165px;
-    }
-
-    .subscribe-btn {
-      left: 5px;
-      right: auto;
-    }
-  }
-
-  @media (max-width: 991px) {
-    .newsletter-section {
-      .newsletter-form .form-control {
-        padding: 10px 10px 10px 110px;
-      }
-    }
-  }
-
-  @media (max-width: 575px) {
-    .newsletter-section .newsletter-form {
-      .subscribe-btn {
-        left: 3px;
-      }
-    }
-  }
-}
-
-// Rtl newsletter section end
-/*----------------------------------------------
-Newsletter section end
-----------------------------------------------*/
-
-/*----------------------------------------------
 20. Footer section start
 ----------------------------------------------*/
 .footer-section {
@@ -7650,6 +7516,7 @@ Newsletter section end
       font-size: 20px;
       font-family: var(--heading-font);
       color: rgb(var(--white));
+      font-weight: 600;
     }
   }
 
@@ -7708,11 +7575,17 @@ Newsletter section end
 .contact-item {
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   i {
     color: rgb(var(--primary-color));
   }
+}
+
+.store-box {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
 }
 
 //Rtl Footer section start

@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>QuickFix</title>
   <!-- Favicon link -->
   <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon" />
@@ -17,6 +18,10 @@
   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
   <!-- select2 Css link -->
   <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <!-- swiper Css link -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <!-- aos Css link -->
+  <link rel="stylesheet" href="assets/css/aos.css" />
   <!-- Style Css link -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -46,20 +51,7 @@
               <a class="nav-link active" aria-current="page" href="index.html">home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="products.html">product</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="sustainability.html">sustainability</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="global-locations.html">locations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">newsfeed</a>
+              <a class="nav-link" href="products.html">all services</a>
             </li>
           </ul>
         </div>
@@ -68,13 +60,13 @@
         <ul class="custom-nav">
           <li class="nav-item">
             <a class="nav-link cmn-btn" href="contact.html">
-              <div class="btn-wrapper">
-                <div class="main-text btn-single">
-                  <span class="d-none d-md-block">meet with Us</span>
+              <div class="btn-wrapper h-45">
+                <div class="main-text btn-single h-45">
+                  <span class="d-none d-md-block">login</span>
                   <span class="d-md-none"><i class="fa-regular fa-phone"></i></span>
                 </div>
-                <div class="hover-text btn-single">
-                  <span class="d-none d-md-block">meet with Us</span>
+                <div class="hover-text btn-single h-45">
+                  <span class="d-none d-md-block">login</span>
                   <span class="d-md-none"><i class="fa-regular fa-phone"></i></span>
                 </div>
               </div>
@@ -85,7 +77,6 @@
     </div>
   </nav>
   <!-- Nav section end -->
-
 
   <!-- Bottom Mobile Tab nav section start -->
   <ul class="nav bottom-nav fixed-bottom d-lg-none">
@@ -108,142 +99,1384 @@
   </ul>
   <!-- Bottom Mobile Tab nav section end -->
 
-  <!-- Banner section start -->
-  <div class="banner-section">
+  <!-- Products section start -->
+  <section class="products-section">
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="breadcrumb-area">
-            <h3>Our Products</h3>
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="index.html"><i class="fa-light fa-house"></i> Home</a>
+      <div class="mb-50">
+        <div class="row">
+          <div class="col-lg-8">
+            <h3>All services</h3>
+          </div>
+          <div class="col-lg-4">
+            <div class="search-box3" id="search-box2">
+              <input type="text" id="search-input" class="form-control" placeholder="Search area">
+              <div class="search-btn">
+                <i class="far fa-search"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4 g-xl-5">
+        <div class="col-lg-3">
+          <div class="sidebar">
+            <ul class="sidebar-nav" id="sidebar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#AC-Repair-Services">
+                  AC Repair Services
+                </a>
               </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Our Products
+              <li class="nav-item">
+                <a class="nav-link" href="#Appliance-Repair">
+                  Appliance Repair
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Cleaning-Solution">
+                  Cleaning Solution
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Beauty-Wellness">
+                  Beauty & Wellness
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Shifting">
+                  Shifting
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Mens-Salon">
+                  Men's Care & Salon
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Health-Care">
+                  Health & Care
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Electronics-Gadgets-Repair">
+                  Electronics & Gadgets Repair
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Electric-Plumbing">
+                  Electric & Plumbing
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Pest-Control">
+                  Pest Control
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Driver-Service">
+                  Driver Service
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Car-Care-Services">
+                  Car Care Services
+                </a>
               </li>
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- Banner section end -->
+        <div class="col-lg-9">
+          <div data-bs-spy="scroll" data-bs-target="#sidebar-nav" data-bs-offset="0" data-bs-smooth-scroll="true"
+            class="scrollspy-example" tabindex="0">
 
-  <!-- Products section start -->
-  <section class="products-section">
-    <div class="container -fluid">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="section-header text-center">
-            <h3>Womenswear</h3>
+            <div id="AC-Repair-Services" class="service-category-section">
+              <h4 class="mb-25">AC Repair Services</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1731928932_acservicing.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC basic Servicing</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1733298388_acdoctor.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Doctor</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-installation.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC installation</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-gas-refilling.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Gas Refilling</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-cleaning-servicing.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Cleaning & Servicing</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-remote-accessories.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Remote & Accessories</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="Appliance-Repair" class="service-category-section">
+              <h4 class="mb-25">Appliance Repair</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732188449_appliancecheckupcombopackage.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Appliance Combo Care</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732187020_ovenservices.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Oven Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732187164_tvservices.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">TV Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/refrigerator-repair.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Refrigerator Repair</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/microwave-oven-repair.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Microwave Oven Repair</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/geyser-repair-services.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Geyser Repair Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="Cleaning-Solution" class="service-category-section">
+              <h4 class="mb-25">Cleaning Solution</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/Service-2023-05-24-11-33-28-9583.webp" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Home Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Uttara</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732001947_outdoorcleaning.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Special Qurbani Cleaning Packages</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732001256_cleaningcombopackage.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Cleaning Combo Package</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/office-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Office Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/sofa-carpet-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Sofa & Carpet Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/kitchen-chimney-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Kitchen & Chimney Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="Beauty-Wellness" class="service-category-section">
+              <h4 class="mb-25">Beauty & Wellness</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1731928932_acservicing.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC basic Servicing</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1733298388_acdoctor.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Doctor</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-installation.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC installation</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-gas-refilling.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Gas Refilling</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-cleaning-servicing.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Cleaning & Servicing</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-remote-accessories.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Remote & Accessories</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="Shifting" class="service-category-section">
+              <h4 class="mb-25">Shifting</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732188449_appliancecheckupcombopackage.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Appliance Combo Care</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732187020_ovenservices.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Oven Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732187164_tvservices.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">TV Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/refrigerator-repair.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Refrigerator Repair</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/microwave-oven-repair.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Microwave Oven Repair</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/geyser-repair-services.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Geyser Repair Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="Mens-Salon" class="service-category-section">
+              <h4 class="mb-25">Men's Care & Salon</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/Service-2023-05-24-11-33-28-9583.webp" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Home Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Uttara</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732001947_outdoorcleaning.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Special Qurbani Cleaning Packages</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732001256_cleaningcombopackage.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Cleaning Combo Package</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/office-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Office Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/sofa-carpet-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Sofa & Carpet Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/kitchen-chimney-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Kitchen & Chimney Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="Health-Care" class="service-category-section">
+              <h4 class="mb-25">Health & Care</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1731928932_acservicing.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC basic Servicing</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1733298388_acdoctor.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Doctor</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-installation.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC installation</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-gas-refilling.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Gas Refilling</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-cleaning-servicing.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Cleaning & Servicing</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-remote-accessories.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Remote & Accessories</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="Electronics-Gadgets-Repair" class="service-category-section">
+              <h4 class="mb-25">Electronics & Gadgets Repair</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732188449_appliancecheckupcombopackage.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Appliance Combo Care</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732187020_ovenservices.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Oven Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732187164_tvservices.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">TV Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/refrigerator-repair.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Refrigerator Repair</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/microwave-oven-repair.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Microwave Oven Repair</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/geyser-repair-services.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Geyser Repair Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="Electric-Plumbing" class="service-category-section">
+              <h4 class="mb-25">Electric & Plumbing</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/Service-2023-05-24-11-33-28-9583.webp" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Home Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Uttara</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732001947_outdoorcleaning.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Special Qurbani Cleaning Packages</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732001256_cleaningcombopackage.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Cleaning Combo Package</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/office-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Office Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/sofa-carpet-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Sofa & Carpet Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/kitchen-chimney-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Kitchen & Chimney Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="Pest-Control" class="service-category-section">
+              <h4 class="mb-25">Pest Control</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1731928932_acservicing.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC basic Servicing</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1733298388_acdoctor.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Doctor</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-installation.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC installation</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-gas-refilling.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Gas Refilling</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-cleaning-servicing.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Cleaning & Servicing</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/ac-remote-accessories.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">AC Remote & Accessories</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="Driver-Service" class="service-category-section">
+              <h4 class="mb-25">Driver Service</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732188449_appliancecheckupcombopackage.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Appliance Combo Care</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732187020_ovenservices.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Oven Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732187164_tvservices.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">TV Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/refrigerator-repair.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Refrigerator Repair</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/microwave-oven-repair.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Microwave Oven Repair</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/geyser-repair-services.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Geyser Repair Services</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="Car-Care-Services" class="service-category-section">
+              <h4 class="mb-25">Car Care Services</h4>
+              <div class="row g-4 gy-md-5">
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/Service-2023-05-24-11-33-28-9583.webp" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Home Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Uttara</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732001947_outdoorcleaning.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Special Qurbani Cleaning Packages</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/1732001256_cleaningcombopackage.jpg" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Cleaning Combo Package</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/office-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Office Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/sofa-carpet-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Sofa & Carpet Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <a href="" class="product-box">
+                    <div class="img-box">
+                      <img src="./assets/img/product/kitchen-chimney-cleaning.png" alt="">
+                      <div class="reviews d-flex align-items-center gap-2">
+                        <i class="active fa-solid fa-star"></i>
+                        <span>4/5</span>
+                      </div>
+                    </div>
+                    <div class="text-box">
+                      <div class="title">Kitchen & Chimney Cleaning</div>
+                      <div class="price">From - <span class="price-title">₦ 9,750,000</span></div>
+                      <div class="location mt-2"><i class="fa-regular fa-location-dot"></i> Dhaka, Gulshan</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </div>
-      </div>
-      <div class="row g-3">
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-2.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-3.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-4.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-5.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-6.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-7.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-8.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-9.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-10.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-11.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="product-box">
-            <img src="./assets/img/product/menswear-12.jpg" alt="">
-          </div>
+
         </div>
       </div>
     </div>
   </section>
   <!-- Products section end -->
 
-
-
   <!-- Footer Section start -->
   <section class="footer-section">
-    <div class="newsletter-section mb-50">
-      <div class="container">
-        <div class="newsletter-section-inner">
-          <img class="shape" src="./assets/img/background/bg-newsletter.png" alt="listpro">
-          <div class="row align-items-center g-4 g-sm-5">
-            <div class="col-lg-6 col-md-5">
-              <div class="content-area">
-
-                <p class="mb-0">For more offer</p>
-                <h1 class="subscribe-normal-text">Join our community</h1>
-              </div>
-
-            </div>
-            <div class="col-lg-6 col-md-7">
-              <form class="newsletter-form">
-                <input type="text" class="form-control" placeholder="Enter your mail">
-                <button type="button" class="subscribe-btn">Subscribe</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="row gy-4 g-sm-5">
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-3 col-sm-6">
           <div class="footer-widget">
             <div class="widget-logo">
               <a href="#nav_area"><img class="footer-logo" src="assets/img/logo/logo-white.png" alt="QuickFix" /></a>
             </div>
-            <p>
-              Experience the QuickFix Advantage - Empowering Social Success
-              with Advanced, Data-Driven Solutions and Innovative Strategies.
-            </p>
+            <h6 class="mb-2 text-white">Address:</h6>
+            <p class="contact-item"><i class="fa-regular fa-location-dot"></i>No. 12 Adeola Odeku Street, Victoria
+              Island, Lagos, 101241, Nigeria</p>
+            <h6 class="mt-20 mb-2 text-white">Contact:</h6>
+            <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
+            <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="widget-title">Quick Links</h5>
+            <ul>
+              <li><a class="widget-link" href="products.html">All Services</a></li>
+              <li><a class="widget-link" href="about.html">Contact Us</a></li>
+              <li><a class="widget-link" href="faq.html">FAQ</a></li>
+              <li><a class="widget-link" href="faq.html">Home</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+          <div class="footer-widget">
+            <h5 class="widget-title">Company Policy</h5>
+            <ul>
+              <li>
+                <a class="widget-link" href="policy.html">Privacy Policy</a>
+              </li>
+              <li><a class="widget-link" href="">Refund Policy</a></li>
+              <li><a class="widget-link" href="">Terms of use</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 pt-sm-0 pt-3">
+          <div class="footer-widget">
+            <h5 class="widget-title">Download App</h5>
+            <p>Tackle your to-do list wherever you are with our mobile app & make your life easy.</p>
+            <div class="store-box">
+              <a href="" class="item">
+                <img src="./assets/img/store/google-play.png" alt="">
+              </a>
+              <a href="" class="item">
+                <img src="./assets/img/store/apple-store.png" alt="">
+              </a>
+            </div>
 
             <ul class="social-box mt-30">
               <li>
@@ -261,53 +1494,136 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-2 col-sm-6">
-          <div class="footer-widget">
-            <h5 class="widget-title">Quick Links</h5>
-            <ul>
-              <li><a class="widget-link" href="about.html">About</a></li>
-              <li><a class="widget-link" href="recent-highlight.html">Recent Highlight</a></li>
-
-              <li><a class="widget-link" href="global-locations.html">Global location</a></li>
-              <li><a class="widget-link" href="contact.html">Meet with us</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
-          <div class="footer-widget">
-            <h5 class="widget-title">Company Policy</h5>
-            <ul>
-              <li>
-                <a class="widget-link" href="policy.html">Privacy Policy</a>
-              </li>
-              <li><a class="widget-link" href="">Refund Policy</a></li>
-              <li><a class="widget-link" href="">Terms of use</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
-          <div class="footer-widget">
-            <h5 class="widget-title">information</h5>
-            <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
-            <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
-            <p class="contact-item"><i class="fa-regular fa-location-dot"></i>Bangladesh HQ - BS Tower, House# 28, 9th
-              Avenue, Block- D,
-              7th Floor, Sector- 15, Uttara,
-              Dhaka, 1230</p>
-          </div>
-        </div>
       </div>
       <hr class="cmn-hr" />
       <div class="copyright-area">
         <p class="mb-0 text-center">
           Copyright ©2025
-          <a class="highlight fw-bold" href="index.html">QuickFix</a> All Rights
+          <a class="highlight" href="index.html">QuickFix</a> All Rights
           Reserved
         </p>
       </div>
     </div>
   </section>
   <!-- Footer Section end -->
+
+  <!-- Modal section start -->
+  <div class="modal fade location-modal" id="location-modal" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <button type="button" class="back-btn"><i class="fa-regular fa-angle-left"></i> back</button>
+          <h5 class="modal-title" id="staticBackdropLabel">
+            Select Country
+          </h5>
+          <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-light fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="d-flex gap-3 px-4 py-3">
+            <div class="search-box3 flex-grow-1" id="search-box2">
+              <input type="text" id="search-input" class="form-control" placeholder="Search area">
+              <div class="search-btn">
+                <i class="far fa-search"></i>
+              </div>
+            </div>
+            <a class="cmn-btn3" href="">
+              <div class="btn-wrapper">
+                <div class="main-text btn-single">
+                  <i class="fa-solid fa-location-crosshairs"></i> Current location
+                </div>
+                <div class="hover-text btn-single">
+                  <i class="fa-solid fa-location-crosshairs"></i> Current location
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="country-flags-container px-4 py-3 pt-0">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/bd.png" alt="">
+                  <span>Bangladesh</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/ng.png" alt="">
+                  <span>nigeria</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/pk.png" alt="">
+                  <span>pakistan</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/in.png" alt="">
+                  <span>india</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/gh.png" alt="">
+                  <span>ghana</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <img src="./assets/img/country-flags/png100px/ke.png" alt="">
+                  <span>Kenya</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Dhaka</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Rangpur</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Rajshahi</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Khulna</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Barishal</span>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="" class="item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Chattogram</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal section end -->
+
 
   <!-- Jquery Js link -->
   <script src="assets/js/jquery-3.7.1.min.js"></script>
@@ -320,6 +1636,10 @@
   <!-- counterup Js link -->
   <script src="assets/js/jquery.counterup.min.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>
+  <!-- Swiper Js link -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- aos Js link -->
+  <script src="assets/js/aos.js"></script>
   <!-- Main Js link -->
   <script src="assets/js/main.js"></script>
 </body>
