@@ -204,7 +204,7 @@ if ($(".fancybox-carousel-section").length) {
     },
     Dots: false,
     Navigation: false,
-    center: true,
+    center: false,
     slidesPerPage: 1,
     infinite: true,
   });

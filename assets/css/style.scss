@@ -678,9 +678,11 @@ Breadcrumb start
   display: inline-flex;
   justify-content: center;
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: 16px;
 
   .breadcrumb-item {
+    color: rgb(var(--white));
+
     + {
       .breadcrumb-item {
         &::before {
@@ -2282,7 +2284,6 @@ Offcanvas end
 .action-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 5px;
   border-radius: 999px;
   height: 40px;
@@ -2291,7 +2292,6 @@ Offcanvas end
   padding: 6px;
   background-color: rgb(var(--white));
   transition: var(--transition);
-  text-transform: capitalize;
 
   &:hover {
     background-color: rgb(var(--white), 0.8);
@@ -2300,6 +2300,28 @@ Offcanvas end
   &.invite {
     width: auto;
     padding: 8px 12px;
+  }
+}
+
+.action-btn2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 999px;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+  padding: 6px;
+  transition: var(--transition);
+  font-size: 20px;
+
+  &.active {
+    color: rgb(var(--primary-color));
+  }
+
+  &:hover {
+    background-color: rgb(var(--white), 0.1);
   }
 }
 
@@ -3836,17 +3858,24 @@ hr.divider:after {
     max-height: 570px;
   }
 
+  .carousel__button {
+    transition: var(--transition);
+
+    &:hover {
+      background-color: rgb(var(--primary-color));
+
+      svg {
+        color: rgb(var(--white));
+      }
+    }
+  }
+
   .carousel__button.is-prev {
     left: 1rem;
   }
 
   .carousel__button.is-next {
     right: 1rem;
-  }
-
-  .carousel__button:focus {
-    outline: none;
-    box-shadow: 0 0 0 0px rgb(var(--primary-color));
   }
 
   .carousel__button svg {
@@ -3892,7 +3921,7 @@ hr.divider:after {
 /*----------------------------------------------
 user nav Profile start
 ----------------------------------------------*/
-.profile-box {
+.nav-profile-box {
   position: relative;
   display: inline-block;
   width: auto;
@@ -3999,7 +4028,7 @@ user nav Profile start
     right: auto;
   }
 
-  .profile-box .user-dropdown {
+  .nav-profile-box .user-dropdown {
     left: 0;
     right: auto;
   }
@@ -4441,6 +4470,58 @@ user nav Profile end
 }
 
 // shopping cart dropdown end
+
+// Profile box start
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .img-box {
+    position: relative;
+
+    img {
+      width: 70px;
+      min-width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      padding: 2px;
+      border: 1px solid var(--border-color1);
+    }
+
+    .status {
+      position: absolute;
+      background-color: #f5ca99;
+      border: 3px solid rgb(var(--white));
+      border-radius: 50%;
+      bottom: 2px;
+      height: 16px;
+      right: 2px;
+      width: 16px;
+
+      &.active {
+        background-color: var(--lime-green);
+      }
+    }
+  }
+
+  .text-box {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: var(--heading-font);
+    font-weight: 500;
+
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      font-family: var(--heading-font);
+      display: block;
+    }
+  }
+}
+
+// Profile box end
 
 // Profile box2 start
 .profile-box2 {
@@ -5239,26 +5320,7 @@ Cmn table start
     border: none;
   }
 
-  .profile-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
 
-    .img-box {
-      img {
-        width: 50px;
-        min-width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        object-fit: cover;
-      }
-    }
-
-    .text-box {
-      text-transform: capitalize;
-      font-weight: 500;
-    }
-  }
 }
 
 .table-striped>tbody>tr:nth-of-type(odd)>* {
@@ -6113,7 +6175,7 @@ Cmn table end
 
   li {
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 8px;
     }
   }
 }
@@ -6941,13 +7003,6 @@ Category section end
 
 }
 
-/*----------------------------------------------
-00. Products section section end
-----------------------------------------------*/
-
-/*----------------------------------------------
-05. All service section start
-----------------------------------------------*/
 .service-category-section {
   &:not(:last-child) {
     margin-bottom: 60px;
@@ -6963,9 +7018,10 @@ Category section end
 }
 
 .sidebar-nav {
-  .nav-item{
+  .nav-item {
     margin-bottom: 2px;
   }
+
   .nav-link {
     padding: 15px 10px;
     border-right: 5px solid transparent;
@@ -6978,16 +7034,91 @@ Category section end
     transition: var(--transition);
 
     &.active {
-     border-right: 5px solid rgb(var(--primary-color));
+      border-right: 5px solid rgb(var(--primary-color));
     }
-    &.active, &:hover {
+
+    &.active,
+    &:hover {
       background-color: rgb(var(--primary-color), 0.1);
     }
   }
 }
 
 /*----------------------------------------------
-All service section end
+Products section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+00. Product details section start
+----------------------------------------------*/
+.product-details-section{
+  padding: 60px 0;
+}
+.side-box {
+  padding: 20px;
+  background-color: rgb(var(--white));
+  box-shadow: var(--shadow1);
+  border-radius: 15px;
+  border: 1px solid var(--border-color1);
+  margin-top: -200px;
+  z-index: 1;
+  position: sticky;
+  top: 85px;
+
+  .action-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border-color1);
+    padding: 8px 10px;
+    border-radius: 9999px;
+    width: 100%;
+    transition: var(--transition);
+    text-align: initial;
+    height: auto;
+    justify-content: start;
+
+    .img-box {
+      img {
+        width: 30px;
+      }
+    }
+
+    &:hover {
+      background-color: rgb(var(--light-grayish-blue));
+    }
+
+    h6 {
+      font-size: 16px;
+    }
+  }
+
+  .sefety-box {
+    margin-top: 20px;
+    border: 1px solid var(--border-color1);
+    padding: 10px;
+    border-radius: 10px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    img {
+      width: 35px;
+    }
+  }
+}
+
+@media(min-width: 1440px) {
+  .side-box {
+    margin-right: -75px;
+  }
+}
+
+/*----------------------------------------------
+Product details section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -7675,12 +7806,13 @@ Copyright end
 ----------------------------------------------*/
 .banner-section {
   position: relative;
-  padding: 140px 0;
+  padding: 50px 0 60px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
   background-image: url(../img/banner/banner-img.jpg);
+  color: rgb(var(--white));
 
   &::after {
     content: "";
@@ -7688,19 +7820,55 @@ Copyright end
     width: 100%;
     inset: 0;
     position: absolute;
-    background-color: rgb(var(--black), 0.6);
+    background-image: linear-gradient(90deg, rgb(var(--black), 0.93) 26%, rgb(0, 0, 0, 0.07) 100%);
     z-index: -1;
   }
-}
 
-.breadcrumb-area {
-  color: rgb(var(--white));
-
-  h3 {
+  h4 {
     text-transform: capitalize;
-    font-size: 42px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: rgb(var(--white));
+  }
+
+  .price {
+
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .price-title {
+      font-weight: 700;
+      font-size: 32px;
+      color: rgb(var(--primary-color));
+    }
+  }
+
+  .location {
+    font-size: 16px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .reviews {
+    font-size: 16px;
+    background-color: rgb(var(--primary-color));
+    display: inline-flex;
+    align-items: baseline;
+    gap: 5px;
+    padding: 3px 6px;
+    border-radius: 4px;
+
+    .active {
+      color: rgb(var(--white));
+    }
+  }
+
+  .small-text {
+    font-size: 14px;
   }
 }
 
@@ -7713,10 +7881,6 @@ Copyright end
     h3 {
       font-size: 36px;
     }
-  }
-
-  .breadcrumb-area {
-    font-size: 16px;
   }
 }
 
@@ -8005,195 +8169,4 @@ Policy section end
 // Responsive error section end
 /*----------------------------------------------
 Error end
-----------------------------------------------*/
-
-/*----------------------------------------------
-00. Global locations section start
-----------------------------------------------*/
-.location-box {
-  border: 1px solid var(--border-color1);
-  box-shadow: var(--shadow1);
-  padding: 15px;
-  border-radius: 10px;
-
-  .top-box {
-    display: flex;
-    gap: 15px;
-
-    .img-box {
-      width: 50px;
-      min-width: 50px;
-      height: 50px;
-
-      img {
-        border-radius: 50%;
-      }
-    }
-  }
-}
-
-.map-slick {
-  margin: 0 25px;
-
-  .slick-slide {
-    margin: 1px 3px;
-    border: 2px solid transparent;
-    border-radius: 10px;
-  }
-
-  .slick-current {
-    border-color: rgb(var(--primary-color));
-  }
-
-  .slick-arrow {
-    width: 41px;
-    height: 41px;
-    background-color: rgb(var(--primary-color));
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  .slick-prev {
-    // left: -50px;
-
-    &::before {
-      line-height: 0.3;
-    }
-  }
-
-  .slick-next {
-    // right: -50px;
-
-    &::before {
-      line-height: 0.3;
-    }
-  }
-}
-
-@media (max-width: 575px) {
-  .map-slick .slick-arrow {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-/*----------------------------------------------
-Global locations section end
-----------------------------------------------*/
-
-/*----------------------------------------------
-Recent highlight section start
-----------------------------------------------*/
-.recent-highlight-item {
-  &:nth-child(even) {
-    .recent-highlight-row {
-      flex-direction: row-reverse;
-    }
-  }
-
-  .img-box {
-    position: relative;
-    margin-bottom: 22px;
-
-    img {
-      aspect-ratio: 14/9;
-      object-fit: cover;
-    }
-
-    .date {
-      padding: 10px 30px;
-      background-color: rgb(var(--primary-color));
-      color: rgb(var(--white));
-      font-weight: 500;
-      font-size: 20px;
-      position: absolute;
-      bottom: -22px;
-      left: 22px;
-    }
-  }
-}
-
-/*----------------------------------------------
-Recent highlight section end
-----------------------------------------------*/
-
-/*----------------------------------------------
-Recent highlight details section start
-----------------------------------------------*/
-.recent-highlight-details {
-  .img-box {
-    img {
-      aspect-ratio: 14/8;
-      object-fit: cover;
-    }
-  }
-}
-
-/*----------------------------------------------
-Recent highlight details section end
-----------------------------------------------*/
-
-/*----------------------------------------------
-sustainability section start
-----------------------------------------------*/
-.sustainability-section {
-  .left-side {
-    position: sticky;
-    top: 75px;
-
-    .img-box {
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
-.product-box2 {
-  &:hover {
-    .img-box {
-      img {
-        transform: scale(1);
-      }
-    }
-  }
-
-  .img-box {
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      aspect-ratio: 14 / 15;
-      transform: scale(1.04);
-      transition: var(--transition);
-    }
-  }
-}
-
-/*----------------------------------------------
-sustainability section end
-----------------------------------------------*/
-
-/*----------------------------------------------
-sustainability goal section start
-----------------------------------------------*/
-.sustainability-goal-section {
-  background-color: var(--bg-color2);
-
-  &.two {
-    background-color: var(--bg-color1);
-  }
-
-  .img-box {
-    img {
-      aspect-ratio: 5 / 4;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-}
-
-/*----------------------------------------------
-sustainability goal section end
 ----------------------------------------------*/
