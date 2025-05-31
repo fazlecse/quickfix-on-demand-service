@@ -61,7 +61,7 @@ Typography
   --soft-blue: 193, 191, 253;
   --grayish-violet: #f5f4f7;
   --soft-green: #ccf888;
-  --lime-green: #0ca464;
+  --lime-green: 12, 164, 100;
   --soft-red: 216, 42, 104;
   --light-red: 255, 93, 93;
   --lime-gray: #d0d0d0;
@@ -74,6 +74,7 @@ Typography
   --bg-color1: #ffffff;
   --bg-color2: #fcfcfc;
   --bg-color3: #21242e;
+  --bg-color3: #F4F5F5;
   --bg-color4: #020612;
   --border-color1: rgba(231, 234, 243, 0.7);
   --border-color2: rgba(140, 152, 164, 0.25);
@@ -895,15 +896,20 @@ body::-webkit-scrollbar-thumb {
 
 // Accordion section start
 
-.accordion-button {
-  // padding-left: 0;
-  // padding-right: 0;
+.accordion-item {
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
   color: rgb(var(--heading-color));
-  font-weight: 500;
-  font-size: 18px;
+}
+
+.accordion-button {
+  color: rgb(var(--heading-color));
+  font-weight: 600;
+  font-size: 16px;
   border-radius: 10px !important;
   text-transform: capitalize;
-  background-color: var(--bg-color2);
+  padding: 0 0 15px;
 
   &:focus {
     box-shadow: none;
@@ -916,23 +922,32 @@ body::-webkit-scrollbar-thumb {
   }
 
   &::after {
-    background-size: 18px;
+    background: url(../img/accordion/plus.png);
+    width: 25px;
+    height: 25px;
+    background-color: rgb(var(--primary-color));
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+  }
+
+  &:not(.collapsed) {
+    &::after {
+      background: url(../img/accordion/minus.png);
+      width: 25px;
+      height: 25px;
+      background-color: rgb(var(--primary-color));
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+    }
   }
 }
 
-.accordion-item {
-  margin: 10px 0;
-  border-radius: 10px;
-  border: none;
-  background-color: var(--bg-color2);
-  color: rgb(var(--heading-color));
-}
-
-.rtl {
-  .accordion-button::after {
-    margin-left: 0;
-    margin-right: auto;
-  }
+.accordion-body {
+  padding-top: 0;
 }
 
 // Accordion section end
@@ -2190,6 +2205,38 @@ Offcanvas end
   }
 }
 
+.cmn-btn4 {
+  color: rgb(var(--heading-color));
+  transition: var(--transition);
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  gap: 5px;
+  font-weight: 500;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 2px;
+    background-color: rgb(var(--black));
+    left: 0;
+    top: 100%;
+    transition: width 0.28s cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+
+  &:hover {
+    color: rgb(var(--heading-color));
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
 .login-btn {
   display: flex;
   padding: 14px 24px;
@@ -2803,7 +2850,7 @@ Alerts section start
   font-weight: 500;
 
   i {
-    color: var(--orange);
+    color: rgb(var(--orange));
     font-size: 16px;
   }
 }
@@ -3022,7 +3069,7 @@ section {
 }
 
 .star-list li .active {
-  color: var(--orange);
+  color: rgb(var(--orange));
 }
 
 .opacity {
@@ -3338,11 +3385,12 @@ hr.divider:after {
 .cmn-list {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 15px;
 
   .item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
     color: rgb(var(--heading-color));
     font-size: 16px;
@@ -3484,16 +3532,16 @@ hr.divider:after {
   &>input:checked~label:hover,
   &>input:checked~label:hover~label,
   &>label:hover~input:checked~label {
-    color: var(--orange);
+    color: rgb(var(--orange));
   }
 
   &:not(:checked)>label:hover,
   &:not(:checked)>label:hover~label {
-    color: var(--orange);
+    color: rgb(var(--orange));
   }
 
   &>input:checked~label {
-    color: var(--orange);
+    color: rgb(var(--orange));
   }
 }
 
@@ -3504,7 +3552,7 @@ hr.divider:after {
     text-align: center;
 
     i {
-      color: var(--orange);
+      color: rgb(var(--orange));
       font-size: 14px;
     }
   }
@@ -4501,7 +4549,7 @@ user nav Profile end
       width: 16px;
 
       &.active {
-        background-color: var(--lime-green);
+        background-color: rgb(var(--lime-green));
       }
     }
   }
@@ -4528,13 +4576,13 @@ user nav Profile end
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   max-width: 496px;
   margin: 0 auto;
 
   .img-box {
-    width: 140px;
-    height: 140px;
+    width: 80px;
+    height: 80px;
 
     img {
       width: 100%;
@@ -4549,8 +4597,8 @@ user nav Profile end
 
     .title {
       text-transform: capitalize;
-      font-size: 28px;
-      font-weight: 400;
+      font-size: 20px;
+      font-weight: 500;
       margin-bottom: 5px;
     }
   }
@@ -5936,10 +5984,6 @@ Cmn table end
         }
       }
     }
-
-    .cmn-btn4 {
-      font-size: 16px;
-    }
   }
 }
 
@@ -6927,6 +6971,7 @@ Category section end
     border-radius: 10px;
     aspect-ratio: 3/2;
     box-shadow: var(--shadow2);
+    display: block;
 
     img {
       transition: var(--transition);
@@ -6941,6 +6986,12 @@ Category section end
     margin-top: 10px;
     color: rgb(var(--body-color));
     padding: 5px;
+    font-size: 14px;
+
+    .author {
+      font-weight: 500;
+      color: rgb(var(--primary-color));
+    }
 
     .title {
       font-size: 18px;
@@ -6957,12 +7008,11 @@ Category section end
     }
 
     .location {
-      font-size: 13px;
       text-transform: capitalize;
       display: flex;
       align-items: center;
       gap: 7px;
-      color: rgb(var(--primary-color));
+      // color: rgb(var(--primary-color));
     }
 
     .price {
@@ -6970,6 +7020,7 @@ Category section end
       align-items: center;
       gap: 10px;
       margin-top: 6px;
+      font-size: 16px;
     }
 
     .price-title {
@@ -7051,17 +7102,22 @@ Products section end
 /*----------------------------------------------
 00. Product details section start
 ----------------------------------------------*/
-.product-details-section{
+.product-details-section {
   padding: 60px 0;
+
+  .side-box {
+    margin-top: -200px;
+    z-index: 1;
+
+  }
 }
+
 .side-box {
   padding: 20px;
   background-color: rgb(var(--white));
   box-shadow: var(--shadow1);
   border-radius: 15px;
   border: 1px solid var(--border-color1);
-  margin-top: -200px;
-  z-index: 1;
   position: sticky;
   top: 85px;
 
@@ -7112,8 +7168,35 @@ Products section end
 }
 
 @media(min-width: 1440px) {
-  .side-box {
-    margin-right: -75px;
+  .product-details-section {
+    .side-box {
+      margin-right: -75px;
+    }
+  }
+}
+
+.author-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .img-box {
+    img {
+      width: 60px;
+      min-width: 60px;
+      height: 60px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.review-item {
+  border: 1px solid var(--border-color1);
+  padding: 20px 15px;
+  border-radius: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 
@@ -7122,15 +7205,11 @@ Product details section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-00. clients section section start
+00. Profile section start
 ----------------------------------------------*/
 
-.clients-section {
-  background-color: var(--bg-color2);
-}
-
 /*----------------------------------------------
-clients section section end
+Profile section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
