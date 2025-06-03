@@ -389,3 +389,16 @@ if ($(".search-box2").length) {
   });
 }
 // Dropdown select with Filter end
+
+// Adv search box start
+$(document).ready(function () {
+  if ($("#adv_search_btn").length) {
+    $("#adv_search_btn").on("click", function () {
+      $("#additional_box").toggleClass("active");
+    });
+    $("#cancel_btn").on("click", function () {
+      $("#additional_box").removeClass("active");
+    });
+  }
+});
+// Adv search box end

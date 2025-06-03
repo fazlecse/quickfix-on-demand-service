@@ -6,6 +6,7 @@ Typography
   --heading-font: "El Messiri", sans-serif;
   --body-font: "Nunito Sans", sans-serif;
   --primary-color: 179, 189, 44;
+  --primary-color: 0, 181, 63;
   --body-color: 51, 51, 51;
   --heading-color: 5, 11, 32;
   --black: 5, 11, 32;
@@ -2047,7 +2048,7 @@ Chat section start
   color: rgb(var(--white));
 }
 .message-container .chat-box .message-bubble .message-text-box .attach-file-box {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 5px;
   margin-top: 6px;
