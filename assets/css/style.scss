@@ -74,7 +74,6 @@ Typography
   --bg-color1: #ffffff;
   --bg-color2: #fcfcfc;
   --bg-color3: #21242e;
-  --bg-color3: #F4F5F5;
   --bg-color4: #020612;
   --border-color1: rgba(231, 234, 243, 0.7);
   --border-color2: rgba(140, 152, 164, 0.25);
@@ -129,47 +128,14 @@ preloader section start
   width: 100%;
   height: 100vh;
   z-index: 99999;
-  background-color: rgb(var(--white));
+  background-color: var(--bg-color1);
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .preloader-image {
-    width: 100px;
-    animation: flipInY both 2s infinite;
-  }
-
-  @keyframes flipInY {
-    0% {
-      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-      transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-      opacity: 0;
-    }
-
-    40% {
-      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-      transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-
-    60% {
-      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-      transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-      opacity: 1;
-    }
-
-    80% {
-      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-      transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    }
-
-    100% {
-      -webkit-transform: perspective(400px);
-      transform: perspective(400px);
-    }
+  img {
+    max-width: 150px;
+    animation: rotate 2s infinite;
   }
 }
 
@@ -897,7 +863,7 @@ body::-webkit-scrollbar-thumb {
 // Accordion section start
 
 .accordion-item {
-  margin: 10px 0;
+  margin-bottom: 15px;
   border-radius: 10px;
   border: none;
   color: rgb(var(--heading-color));
@@ -2030,13 +1996,7 @@ Offcanvas end
 // Shape area end
 
 .section-header {
-  margin-bottom: 80px;
-}
-
-@media (max-width: 991px) {
-  .section-header {
-    margin-bottom: 40px;
-  }
+  margin-bottom: 30px;
 }
 
 .top-right-radius-0 {
@@ -3091,7 +3051,7 @@ Cmn tab2 end
 
 // Video play btn end
 section {
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
 @media (max-width: 991px) {
@@ -3237,7 +3197,7 @@ hr.divider:after {
   position: relative;
   top: -12px;
   padding: 0 16px;
-  background: rgb(var(--bg-color1));
+  background: var(--bg-color1);
   color: rgb(var(--heading-color));
 }
 
@@ -7375,8 +7335,8 @@ Profile section end
       text-overflow: ellipsis;
       -webkit-box-orient: vertical;
       display: -webkit-box;
-      -webkit-line-clamp: 4;
-      line-clamp: 4;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
 
     }
   }
@@ -8164,6 +8124,104 @@ Map section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
+24. Login Signup section start
+----------------------------------------------*/
+.login-register-section {
+  background-color: rgb(var(--bg-color1));
+}
+
+.login-register-form {
+  padding: 30px;
+  z-index: 1;
+  position: relative;
+  background-color: rgb(var(--bg-color1));
+  border-radius: 20px;
+  border: 1px solid var(--border-color1);
+  box-shadow: var(--shadow1);
+
+  .logo-area {
+    margin-bottom: 20px;
+    display: inline-flex;
+  }
+
+  .cmn-btn2 {
+    height: 45px;
+    border-radius: 5px;
+  }
+
+  .cmn-btn-group {
+    .btn img {
+      width: 16px;
+    }
+  }
+}
+
+.password-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .form-control {
+    padding-right: 35px;
+  }
+
+  .password-icon {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+  }
+}
+
+// Responsive login signup start
+@media (max-width: 991px) {
+  .login-register-section .login-register-form {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .login-register-section .login-register-form {
+    margin: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .login-register-section .login-register-form {
+    padding: 20px;
+  }
+}
+
+// Responsive login signup end
+
+// Rtl login signup page start
+.rtl {
+  .password-box {
+    .form-control {
+      padding-right: 0.75rem;
+      padding-left: 35px;
+    }
+
+    .password-icon {
+      right: auto;
+      left: 15px;
+    }
+  }
+
+  .login-register-box .img-box img {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+// Rtl login signup page end
+
+/*----------------------------------------------
+Login Signup end
+----------------------------------------------*/
+
+/*----------------------------------------------
 26. Pagination section start
 ----------------------------------------------*/
 .pagination-section {
@@ -8213,6 +8271,20 @@ Map section end
 
 /*----------------------------------------------
 Pagination end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Faq section start
+----------------------------------------------*/
+.faq-section {
+  .left-side {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+/*----------------------------------------------
+Faq section end
 ----------------------------------------------*/
 
 /*----------------------------------------------

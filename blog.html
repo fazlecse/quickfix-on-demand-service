@@ -21,7 +21,13 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="">
+<body onload="preloaderFunction()" class="">
+
+  <!-- Preloader section start -->
+  <div id="preloader">
+    <img src="./assets/img/preloader/wrench.gif" alt="preloader-img" />
+  </div>
+  <!-- Preloader section end -->
 
   <!-- Nav section start -->
   <nav class="navbar navbar-expand-lg sticky-top">
@@ -54,7 +60,7 @@
       <div class="nav-right">
         <ul class="custom-nav">
           <li class="nav-item">
-            <a class="nav-link cmn-btn" href="contact.html">
+            <a class="nav-link cmn-btn" href="login.html">
               <div class="btn-wrapper h-45">
                 <div class="main-text btn-single h-45">
                   <span class="d-none d-md-block">login</span>
@@ -95,40 +101,17 @@
   </ul>
   <!-- Bottom Mobile Tab nav section end -->
 
-  <!-- Banner section start -->
-  <div class="banner-section">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="breadcrumb-area">
-            <h3>Newsfeed</h3>
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="index.html"><i class="fa-light fa-house"></i> Home</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Newsfeed
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Banner section end -->
-
   <!-- Blog Section start -->
   <section class="blog-section">
     <div class="container">
       <div class="row align-items-center text-center text-md-start">
         <div class="col-md-6">
-          <div class="section-subtitle">newsfeed</div>
-          <h2>Stay Informed with Our Latest News & Insights</h2>
+          <div class="section-subtitle">our blogs</div>
+          <h3>Stay Informed with Our Latest News & Insights</h3>
         </div>
         <div class="col-md-6">
-          <p class="mb-0">At QuickFix, we believe in sharing knowledge that empowers our clients to make smarter
-            sourcing decisions. Explore industry insights, sourcing tips, and behind-the-scenes stories from the world
-            of garment manufacturing.</p>
+          <p class="mb-0">Explore expert tips, platform updates, and real-life stories to help you make the most of
+            every service — anytime, anywhere.</p>
         </div>
 
       </div>
@@ -138,7 +121,7 @@
             <div class="blog-box">
               <a href="blog-details.html">
                 <div class="img-box">
-                  <img src="assets/img/blog/blog-image3.webp" alt="">
+                  <img src="assets/img/blog/blog-img.jpg" alt="">
                 </div>
               </a>
               <div class="text-box">
@@ -164,11 +147,9 @@
                     </div>
                   </div>
                 </ul>
-                <a class="blog-title" href="blog-details.html">How to Choose the Right Garment Manufacturer</a>
-                <div class="para-text">
-                  <p>Understand key factors like certifications, production capacity, and compliance standards before
-                    selecting a vendor.</p>
-                </div>
+                <a class="blog-title" href="blog-details.html">How On-Demand Marketplaces Are Changing the Game</a>
+                <div class="para-text">Explore how on-demand platforms are transforming the way people hire
+                  professionals—from cleaning to coding.</div>
                 <a href="" class="blog-btn mt-20">Read more <i class="fa-regular fa-arrow-right-long"></i></a>
               </div>
 
@@ -178,7 +159,7 @@
             <div class="blog-box">
               <a href="blog-details.html">
                 <div class="img-box">
-                  <img src="assets/img/blog/blog-image4.webp" alt="">
+                  <img src="assets/img/blog/blog-img-2.jpg" alt="">
                 </div>
               </a>
               <div class="text-box">
@@ -204,11 +185,9 @@
                     </div>
                   </div>
                 </ul>
-                <a class="blog-title" href="blog-details.html"> Fabric Sourcing 101: Cotton, Organic, Recycled &
-                  More</a>
-                <div class="para-text">
-                  <p>A beginner-friendly guide on choosing the right fabric for your product line.</p>
-                </div>
+                <a class="blog-title" href="blog-details.html">Why On-Demand Services Are the New Normal</a>
+                <div class="para-text">Discover the convenience, flexibility, and speed that make on-demand marketplaces
+                  a preferred choice for modern consumers.</div>
                 <a href="" class="blog-btn mt-20">Read more <i class="fa-regular fa-arrow-right-long"></i></a>
               </div>
 
@@ -218,7 +197,7 @@
             <div class="blog-box">
               <a href="blog-details.html">
                 <div class="img-box">
-                  <img src="assets/img/blog/blog-image6-1.webp" alt="">
+                  <img src="assets/img/blog/blog-img-3.jpg" alt="">
                 </div>
               </a>
               <div class="text-box">
@@ -244,11 +223,9 @@
                     </div>
                   </div>
                 </ul>
-                <a class="blog-title" href="blog-details.html"> Quality Control in Garment Production: What Buyers Must
-                  Know</a>
-                <div class="para-text">
-                  <p>Learn how quality checks are done at various stages of apparel manufacturing.</p>
-                </div>
+                <a class="blog-title" href="blog-details.html">What Makes an On-Demand Platform Successful</a>
+                <div class="para-text">A look into what users and service providers need from a platform—and how to
+                  deliver it effectively.</div>
                 <a href="" class="blog-btn mt-20">Read more <i class="fa-regular fa-arrow-right-long"></i></a>
               </div>
 
@@ -258,7 +235,7 @@
             <div class="blog-box">
               <a href="blog-details.html">
                 <div class="img-box">
-                  <img src="assets/img/blog/blog-image1.webp" alt="">
+                  <img src="assets/img/blog/blog-img-4.jpg" alt="">
                 </div>
               </a>
               <div class="text-box">
@@ -284,11 +261,9 @@
                     </div>
                   </div>
                 </ul>
-                <a class="blog-title" href="blog-details.html"> Quality Control in Garment Production: What Buyers Must
-                  Know</a>
-                <div class="para-text">
-                  <p>Learn how quality checks are done at various stages of apparel manufacturing.</p>
-                </div>
+                <a class="blog-title" href="blog-details.html">Top 10 Services People Are Booking Online Right Now</a>
+                <div class="para-text">From home repairs to freelance design—see what services are trending on-demand
+                  and why.</div>
                 <a href="" class="blog-btn mt-20">Read more <i class="fa-regular fa-arrow-right-long"></i></a>
               </div>
 
@@ -298,7 +273,7 @@
             <div class="blog-box">
               <a href="blog-details.html">
                 <div class="img-box">
-                  <img src="assets/img/blog/blog-image2.webp" alt="">
+                  <img src="assets/img/blog/blog-img-5.jpg" alt="">
                 </div>
               </a>
               <div class="text-box">
@@ -324,10 +299,10 @@
                     </div>
                   </div>
                 </ul>
-                <a class="blog-title" href="blog-details.html">Ethical Sourcing: Why It Matters in 2025</a>
-                <div class="para-text">
-                  <p>Discover how ethical sourcing is shaping the future of fashion — and how your brand can adapt.</p>
-                </div>
+                <a class="blog-title" href="blog-details.html">From App to Action: The Journey of an On-Demand Service
+                  Request</a>
+                <div class="para-text">Follow the full cycle of a customer request on your platform and what makes the
+                  experience seamless.</div>
                 <a href="" class="blog-btn mt-20">Read more <i class="fa-regular fa-arrow-right-long"></i></a>
               </div>
 
@@ -337,7 +312,7 @@
             <div class="blog-box">
               <a href="blog-details.html">
                 <div class="img-box">
-                  <img src="assets/img/blog/blog-image5.webp" alt="">
+                  <img src="assets/img/blog/blog-img-6.jpg" alt="">
                 </div>
               </a>
               <div class="text-box">
@@ -363,17 +338,14 @@
                     </div>
                   </div>
                 </ul>
-                <a class="blog-title" href="blog-details.html"> Quality Control in Garment Production: What Buyers Must
-                  Know</a>
-                <div class="para-text">
-                  <p>Learn how quality checks are done at various stages of apparel manufacturing.</p>
-                </div>
+                <a class="blog-title" href="blog-details.html">How to Grow Your Income as a Freelancer on On-Demand
+                  Marketplaces</a>
+                <div class="para-text">Smart tips and proven strategies for service providers to get more bookings and
+                  great reviews.</div>
                 <a href="" class="blog-btn mt-20">Read more <i class="fa-regular fa-arrow-right-long"></i></a>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -382,40 +354,56 @@
 
   <!-- Footer Section start -->
   <section class="footer-section">
-    <div class="newsletter-section mb-50">
-      <div class="container">
-        <div class="newsletter-section-inner">
-          <img class="shape" src="./assets/img/background/bg-newsletter.png" alt="listpro">
-          <div class="row align-items-center g-4 g-sm-5">
-            <div class="col-lg-6 col-md-5">
-              <div class="content-area">
-
-                <p class="mb-0">For more offer</p>
-                <h1 class="subscribe-normal-text">Join our community</h1>
-              </div>
-
-            </div>
-            <div class="col-lg-6 col-md-7">
-              <form class="newsletter-form">
-                <input type="text" class="form-control" placeholder="Enter your mail">
-                <button type="button" class="subscribe-btn">Subscribe</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="row gy-4 g-sm-5">
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-3 col-sm-6">
           <div class="footer-widget">
             <div class="widget-logo">
               <a href="#nav_area"><img class="footer-logo" src="assets/img/logo/logo-white.png" alt="QuickFix" /></a>
             </div>
-            <p>
-              Experience the QuickFix Advantage - Empowering Social Success
-              with Advanced, Data-Driven Solutions and Innovative Strategies.
-            </p>
+            <h6 class="mb-2 text-white">Address:</h6>
+            <p class="contact-item"><i class="fa-regular fa-location-dot"></i>No. 12 Adeola Odeku Street, Victoria
+              Island, Lagos, 101241, Nigeria</p>
+            <h6 class="mt-20 mb-2 text-white">Contact:</h6>
+            <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
+            <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="widget-title">Quick Links</h5>
+            <ul>
+              <li><a class="widget-link" href="products.html">All Services</a></li>
+              <li><a class="widget-link" href="about.html">Contact Us</a></li>
+              <li><a class="widget-link" href="faq.html">FAQ</a></li>
+              <li><a class="widget-link" href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+          <div class="footer-widget">
+            <h5 class="widget-title">Company Policy</h5>
+            <ul>
+              <li>
+                <a class="widget-link" href="policy.html">Privacy Policy</a>
+              </li>
+              <li><a class="widget-link" href="">Refund Policy</a></li>
+              <li><a class="widget-link" href="">Terms of use</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 pt-sm-0 pt-3">
+          <div class="footer-widget">
+            <h5 class="widget-title">Download App</h5>
+            <p>Tackle your to-do list wherever you are with our mobile app & make your life easy.</p>
+            <div class="store-box">
+              <a href="" class="item">
+                <img src="./assets/img/store/google-play.png" alt="">
+              </a>
+              <a href="" class="item">
+                <img src="./assets/img/store/apple-store.png" alt="">
+              </a>
+            </div>
 
             <ul class="social-box mt-30">
               <li>
@@ -433,47 +421,12 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-2 col-sm-6">
-          <div class="footer-widget">
-            <h5 class="widget-title">Quick Links</h5>
-            <ul>
-              <li><a class="widget-link" href="about.html">About</a></li>
-              <li><a class="widget-link" href="recent-highlight.html">Recent Highlight</a></li>
-
-              <li><a class="widget-link" href="global-locations.html">Global location</a></li>
-              <li><a class="widget-link" href="contact.html">Meet with us</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
-          <div class="footer-widget">
-            <h5 class="widget-title">Company Policy</h5>
-            <ul>
-              <li>
-                <a class="widget-link" href="policy.html">Privacy Policy</a>
-              </li>
-              <li><a class="widget-link" href="">Refund Policy</a></li>
-              <li><a class="widget-link" href="">Terms of use</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
-          <div class="footer-widget">
-            <h5 class="widget-title">information</h5>
-            <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
-            <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
-            <p class="contact-item"><i class="fa-regular fa-location-dot"></i>Bangladesh HQ - BS Tower, House# 28, 9th
-              Avenue, Block- D,
-              7th Floor, Sector- 15, Uttara,
-              Dhaka, 1230</p>
-          </div>
-        </div>
       </div>
       <hr class="cmn-hr" />
       <div class="copyright-area">
         <p class="mb-0 text-center">
           Copyright ©2025
-          <a class="highlight fw-bold" href="index.html">QuickFix</a> All Rights
+          <a class="highlight" href="index.html">QuickFix</a> All Rights
           Reserved
         </p>
       </div>

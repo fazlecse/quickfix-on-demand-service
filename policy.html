@@ -22,7 +22,13 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="">
+<body onload="preloaderFunction()" class="">
+
+  <!-- Preloader section start -->
+  <div id="preloader">
+    <img src="./assets/img/preloader/wrench.gif" alt="preloader-img" />
+  </div>
+  <!-- Preloader section end -->
 
   <!-- Nav section start -->
   <nav class="navbar navbar-expand-lg sticky-top">
@@ -55,7 +61,7 @@
       <div class="nav-right">
         <ul class="custom-nav">
           <li class="nav-item">
-            <a class="nav-link cmn-btn" href="contact.html">
+            <a class="nav-link cmn-btn" href="login.html">
               <div class="btn-wrapper h-45">
                 <div class="main-text btn-single h-45">
                   <span class="d-none d-md-block">login</span>
@@ -95,28 +101,6 @@
     </li>
   </ul>
   <!-- Bottom Mobile Tab nav section end -->
-
-  <!-- Banner section start -->
-  <div class="banner-section">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="breadcrumb-area">
-            <h3>Privacy policy</h3>
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="index.html"><i class="fa-light fa-house"></i> Home</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Privacy policy
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Banner section end -->
 
   <!-- Policy section start -->
   <section class="policy-section">
@@ -211,40 +195,56 @@
 
   <!-- Footer Section start -->
   <section class="footer-section">
-    <div class="newsletter-section mb-50">
-      <div class="container">
-        <div class="newsletter-section-inner">
-          <img class="shape" src="./assets/img/background/bg-newsletter.png" alt="listpro">
-          <div class="row align-items-center g-4 g-sm-5">
-            <div class="col-lg-6 col-md-5">
-              <div class="content-area">
-
-                <p class="mb-0">For more offer</p>
-                <h1 class="subscribe-normal-text">Join our community</h1>
-              </div>
-
-            </div>
-            <div class="col-lg-6 col-md-7">
-              <form class="newsletter-form">
-                <input type="text" class="form-control" placeholder="Enter your mail">
-                <button type="button" class="subscribe-btn">Subscribe</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="row gy-4 g-sm-5">
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-3 col-sm-6">
           <div class="footer-widget">
             <div class="widget-logo">
               <a href="#nav_area"><img class="footer-logo" src="assets/img/logo/logo-white.png" alt="QuickFix" /></a>
             </div>
-            <p>
-              Experience the QuickFix Advantage - Empowering Social Success
-              with Advanced, Data-Driven Solutions and Innovative Strategies.
-            </p>
+            <h6 class="mb-2 text-white">Address:</h6>
+            <p class="contact-item"><i class="fa-regular fa-location-dot"></i>No. 12 Adeola Odeku Street, Victoria
+              Island, Lagos, 101241, Nigeria</p>
+            <h6 class="mt-20 mb-2 text-white">Contact:</h6>
+            <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
+            <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="widget-title">Quick Links</h5>
+            <ul>
+              <li><a class="widget-link" href="products.html">All Services</a></li>
+              <li><a class="widget-link" href="about.html">Contact Us</a></li>
+              <li><a class="widget-link" href="faq.html">FAQ</a></li>
+              <li><a class="widget-link" href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+          <div class="footer-widget">
+            <h5 class="widget-title">Company Policy</h5>
+            <ul>
+              <li>
+                <a class="widget-link" href="policy.html">Privacy Policy</a>
+              </li>
+              <li><a class="widget-link" href="">Refund Policy</a></li>
+              <li><a class="widget-link" href="">Terms of use</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 pt-sm-0 pt-3">
+          <div class="footer-widget">
+            <h5 class="widget-title">Download App</h5>
+            <p>Tackle your to-do list wherever you are with our mobile app & make your life easy.</p>
+            <div class="store-box">
+              <a href="" class="item">
+                <img src="./assets/img/store/google-play.png" alt="">
+              </a>
+              <a href="" class="item">
+                <img src="./assets/img/store/apple-store.png" alt="">
+              </a>
+            </div>
 
             <ul class="social-box mt-30">
               <li>
@@ -262,47 +262,12 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-2 col-sm-6">
-          <div class="footer-widget">
-            <h5 class="widget-title">Quick Links</h5>
-            <ul>
-              <li><a class="widget-link" href="about.html">About</a></li>
-              <li><a class="widget-link" href="recent-highlight.html">Recent Highlight</a></li>
-
-              <li><a class="widget-link" href="global-locations.html">Global location</a></li>
-              <li><a class="widget-link" href="contact.html">Meet with us</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
-          <div class="footer-widget">
-            <h5 class="widget-title">Company Policy</h5>
-            <ul>
-              <li>
-                <a class="widget-link" href="policy.html">Privacy Policy</a>
-              </li>
-              <li><a class="widget-link" href="">Refund Policy</a></li>
-              <li><a class="widget-link" href="">Terms of use</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
-          <div class="footer-widget">
-            <h5 class="widget-title">information</h5>
-            <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
-            <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
-            <p class="contact-item"><i class="fa-regular fa-location-dot"></i>Bangladesh HQ - BS Tower, House# 28, 9th
-              Avenue, Block- D,
-              7th Floor, Sector- 15, Uttara,
-              Dhaka, 1230</p>
-          </div>
-        </div>
       </div>
       <hr class="cmn-hr" />
       <div class="copyright-area">
         <p class="mb-0 text-center">
           Copyright ©2025
-          <a class="highlight fw-bold" href="index.html">QuickFix</a> All Rights
+          <a class="highlight" href="index.html">QuickFix</a> All Rights
           Reserved
         </p>
       </div>
