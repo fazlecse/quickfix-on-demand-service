@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChainCity Dashboard</title>
+    <!-- Favicon link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+    <!-- Fontawesome-6 Js link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap 5 Css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl carousel Css link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Swiper Css link -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- select2 Css link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+
+
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+</head>
+
+<body onload="preloaderFunction()" class="">
+    <div class="dashboard-wrapper">
+        <!-- Preloader section start -->
+        <div id="preloader">
+            <img src="./assets/img/preloader/house.png" alt="">
+        </div>
+        <!-- Preloader section end -->
+
+        <!-- Header section start -->
+        <header id="header" class="header">
+            <button class="toggle-sidebar-btn d-none d-xl-block"><i class="fa-light fa-list"></i></button>
+            <!-- End Logo -->
+
+            <div class="search-bar">
+                <form class="search-form d-flex align-items-center" method="POST" action="#">
+                    <input type="text" class="form-control" name="query" placeholder="Search"
+                        title="Enter search keyword">
+                    <span class="search-icon" title="Search"><i class="fa-regular fa-magnifying-glass"></i></span>
+                </form>
+            </div><!-- End Search Bar -->
+
+            <!-- Start Icons Navigation -->
+            <nav class="header-nav ms-auto">
+                <ul class="nav-icons">
+                    <li class="nav-item d-none d-lg-block d-xl-none">
+                        <a class="nav-link nav-icon search-bar-toggle" href="#">
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-light fa-bell"></i>
+                            <span class="badge badge-number">4</span>
+                        </a>
+                        <!-- Start Notification Dropdown Items -->
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                            <div class="dropdown-header">
+                                You have 4 new notifications
+                            </div>
+                            <div class="dropdown-body">
+                                <div class="notification-item">
+                                    <a href="">
+                                        <i class="fa-light fa-circle-exclamation text-warning"></i>
+                                        <div>
+                                            <h4>Lorem Ipsum</h4>
+                                            <p>Quae dolorem earum veritatis oditseno</p>
+                                            <p>30 min. ago</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="notification-item">
+                                    <a href="">
+                                        <i class="fa-light fa-circle-xmark text-danger"></i>
+                                        <div>
+                                            <h4>Atque rerum nesciunt</h4>
+                                            <p>Quae dolorem earum veritatis oditseno</p>
+                                            <p>1 hr. ago</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="notification-item">
+                                    <a href="">
+                                        <i class="fa-light fa-circle-check text-success"></i>
+                                        <div>
+                                            <h4>Sit rerum fuga</h4>
+                                            <p>Quae dolorem earum veritatis oditseno</p>
+                                            <p>2 hrs. ago</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="notification-item">
+                                    <a href="">
+                                        <i class="fa-light fa-circle-info text-primary"></i>
+                                        <div>
+                                            <h4>Dicta reprehenderit</h4>
+                                            <p>Quae dolorem earum veritatis oditseno</p>
+                                            <p>4 hrs. ago</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+                            <div class="dropdown-footer">
+                                <a href="#">Show all notifications</a>
+                            </div>
+                        </div>
+                        <!-- End Notification Dropdown Items -->
+
+                    </li>
+                    </li>
+                    <!-- Notification section end -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
+                            data-bs-toggle="dropdown">
+                            <img src="assets/img/person/2.jpg" alt="Profile" class="rounded-circle">
+                            <span class="d-none d-xl-block dropdown-toggle ps-2">John Doe</span>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                            <li class="dropdown-header d-flex justify-content-center align-items-center text-start">
+                                <div class="profile-thum">
+                                    <img src="assets/img/person/2.jpg" alt="ChainCity">
+                                </div>
+                                <div class="profile-content">
+                                    <h6>John Doe</h6>
+                                    <span>Content Creator</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="account-settings-profile.html">
+                                    <i class="fa-light fa-user"></i>
+                                    <span>My Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="account-settings-profile.html">
+                                    <i class="fa-sharp fa-light fa-gear"></i>
+                                    <span>Account Settings</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="api.html">
+                                    <i class="fa-light fa-code"></i>
+                                    <span>api</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                                    <i class="fa-light fa-circle-question"></i>
+                                    <span>Need Help?</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <i class="fa-light fa-right-from-bracket"></i>
+                                    <span>Sign Out</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!-- Nav Profile section end -->
+
+                </ul>
+            </nav>
+            <!-- End Icons Navigation -->
+
+        </header>
+        <!-- Header section start -->
+
+        <!-- Bottom Mobile Tab nav section start -->
+        <ul class="nav bottom-nav fixed-bottom d-xl-none">
+            <li class="nav-item">
+                <a class="nav-link  toggle-sidebar-btn" aria-current="page">
+                    <i class="fa-regular fa-list"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-regular fa-planet-ringed"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fa-regular fa-house"></i></a>
+            </li>
+            <li class="nav-item">
+                <a onclick="searchBar()" class="nav-link search-bar-toggle" href="#"><i
+                        class="fa-regular fa-magnifying-glass"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
+            </li>
+        </ul>
+        <!-- Bottom Mobile Tab nav section end -->
+
+        <!-- Sidebar section start -->
+        <aside id="sidebar" class="sidebar">
+            <div class="logo-container">
+                <a href="user-panel.html" class="logo d-flex align-items-center">
+                    <img src="assets/img/logo/logo.png" alt="ChainCity">
+                </a>
+            </div>
+            <ul class="sidebar-nav" id="sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="user-panel.html">
+                        <i class="fa-regular fa-grid"></i>
+                        <span>dashboard</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#crm" data-bs-toggle="collapse" href="#">
+                        <i class="fa-regular fa-cart-plus"></i><span>order</span>
+                        <i class="fa-regular fa-angle-down ms-auto bi-chevron-down"></i>
+                    </a>
+                    <ul id="crm" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="new-order.html">
+                                <i class="fa-regular fa-circle"></i><span>new order</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mass-order.html">
+                                <i class="fa-regular fa-circle"></i><span>Mass Order</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#account-settings" data-bs-toggle="collapse" href="#">
+                        <i class="fa-sharp fa-regular fa-user"></i><span>Account Settings</span>
+                        <i class="fa-regular fa-angle-down ms-auto bi-chevron-down"></i>
+                    </a>
+                    <ul id="account-settings" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="account-settings-profile.html">
+                                <i class="fa-regular fa-circle"></i><span>Account</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="account-settings-notifications.html">
+                                <i class="fa-regular fa-circle"></i><span>Notifications</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="account-settings-identity-verification.html">
+                                <i class="fa-regular fa-circle"></i><span>KYC</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#components" data-bs-toggle="collapse" href="#">
+                        <i class="fa-regular fa-magnet"></i><span>Components</span>
+                        <i class="fa-regular fa-angle-down ms-auto bi-chevron-down"></i>
+                    </a>
+                    <ul id="components" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="components-alerts.html">
+                                <i class="fa-regular fa-circle"></i><span>Alerts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-regular fa-circle"></i><span>Accordion</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="user-panel-add-fund.html">
+                        <i class="fa-regular fa-wallet"></i>
+                        <span>add fund</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="my-referrals.html">
+                        <i class="fa-brands fa-affiliatetheme"></i>
+                        <span>my referrals</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="money-transfer.html">
+                        <i class="fa-regular fa-arrow-right-arrow-left"></i>
+                        <span>money transfer</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="user-panel-notice.html">
+                        <i class="fa-regular fa-bullhorn"></i>
+                        <span>notice</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="form.html">
+                        <i class="fa-regular fa-note"></i>
+                        <span>form</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="panels.html">
+                        <i class="fa-regular fa-box"></i>
+                        <span>panels</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="user-panel-transection.html">
+                        <i class="fa-regular fa-arrow-right-arrow-left"></i>
+                        <span>transaction</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="api.html">
+                        <i class="fa-regular fa-code"></i>
+                        <span>api</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="chat.html">
+                        <i class="fa-regular fa-comment"></i>
+                        <span>chat</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="support-ticket.html">
+                        <i class="fa-regular fa-headset"></i>
+                        <span>support ticket</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- Sidebar section end -->
+
+        <!-- Main section start -->
+        <main id="main" class="main bg-color2">
+            <div class="main-wrapper">
+                <div class="pagetitle">
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">api</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card mb-50">
+                            <div class="card-header d-flex align-items-center justify-content-between pb-0 border-0">
+                                <h5 class="mb-0">API Key</h5>
+                                <button id="generateBtn" class="cmn-btn">Generate Key</button>
+                            </div>
+                            <div class="card-body p-sm-5">
+                                <h6>API KEY</h6>
+                                <div class="input-group mb-3">
+                                    <input id="referralURL" type="text" class="form-control"
+                                        value="CasZPW7KJipdebKhyCcr" aria-label="Recipient's username"
+                                        aria-describedby="basic-addon2" readonly>
+                                    <div class="input-group-text" id="copyBtn"><i class="fa-regular fa-copy"></i>copy
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-50">
+                            <div class="card-header pb-0 border-0">
+                                <h5 class="mb-0">API Documentation</h5>
+                            </div>
+                            <div class="card-body">
+                                <small>Note: Please read the API intructions carefully. Its your solo responsability
+                                    what
+                                    you add by
+                                    our API.</small>
+                                <div class="cmn-table mt-20">
+                                    <div class="table-responsive overflow-hidden">
+                                        <table class="table table-striped align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Parameter</th>
+                                                    <th scope="col">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>HTTP Method</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>POST</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>Response format</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Json</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>API URL</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span
+                                                            class="text-break">https://demo.smartpanelsmm.com/api/v1</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>API Key</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span class="text-break">fK6aGhCOXIxz0uRi7KbghLxAkP7z3DPJ</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-50">
+                            <div class="card-header pb-0 border-0">
+                                <h5 class="mb-0">PLACE NEW ORDER</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="cmn-table">
+                                    <div class="table-responsive overflow-hidden">
+                                        <table class="table table-striped align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Parameter</th>
+                                                    <th scope="col">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>key</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Your API key</span>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>quantity</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Needed quantity</span>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>action</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>add</span>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>runs
+                                                            <small>(optional)</small></span>
+                                                    </td>
+                                                    <td data-label="Gateway">
+                                                        <span>Runs to deliver</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>service</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Service ID</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>interval
+                                                            <small>(optional)</small></span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Interval in minutes</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>link</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Link to page</span>
+                                                    </td>
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="mb-10">Example response:</h5>
+                                    <div class="api-code-box">
+                                        <pre>
+        {
+           "status": "success",
+           "order": 116
+        }
+                                </pre>
+                                        <div class="editor-dots">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-50">
+                            <div class="card-header pb-0 border-0">
+                                <h5 class="mb-0">STATUS ORDER</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="cmn-table">
+                                    <div class="table-responsive overflow-hidden">
+                                        <table class="table table-striped align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Parameter</th>
+                                                    <th scope="col">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>key</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Your API key</span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>action</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>status</span>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>order</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Order ID</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="mb-10">Example response:</h5>
+                                    <div class="api-code-box">
+                                        <pre>
+        {
+           "status": "Processing",
+           "charge": "3.60",
+           "start_count": 0,
+           "remains": 0,
+           "currency": "BDT"
+        }
+                                </pre>
+                                        <div class="editor-dots">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-50">
+                            <div class="card-header pb-0 border-0">
+                                <h5 class="mb-0">MULTIPLE STATUS ORDER</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="cmn-table">
+                                    <div class="table-responsive overflow-hidden">
+                                        <table class="table table-striped align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Parameter</th>
+                                                    <th scope="col">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>key</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Your API key</span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>action</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>orders</span>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>orders</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Order IDs separated by comma (array data)</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="mb-10">Example response:</h5>
+                                    <div class="api-code-box">
+                                        <pre>
+        [
+           {
+              "order": 116,
+              "status": "Processing",
+              "charge": "3.60",
+              "start_count": 10,
+              "remains": 0
+           },
+           {
+              "order": 117,
+              "status": "Completed",
+              "charge": null,
+              "start_count": 0,
+              "remains": 0
+           }
+        ]
+                                </pre>
+                                        <div class="editor-dots">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-50">
+                            <div class="card-header pb-0 border-0">
+                                <h5 class="mb-0">PLACE REFILL</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="cmn-table">
+                                    <div class="table-responsive overflow-hidden">
+                                        <table class="table table-striped align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Parameter</th>
+                                                    <th scope="col">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>key</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Your API key</span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>action</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>refill</span>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>order</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Order ID</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="mb-10">Example response:</h5>
+                                    <div class="api-code-box">
+                                        <pre>
+        {
+           "refill": "1"
+        }
+                                </pre>
+                                        <div class="editor-dots">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-50">
+                            <div class="card-header pb-0 border-0">
+                                <h5 class="mb-0">STATUS REFILL</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="cmn-table">
+                                    <div class="table-responsive overflow-hidden">
+                                        <table class="table table-striped align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Parameter</th>
+                                                    <th scope="col">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>key</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Your API key</span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>action</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>refill_status</span>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>refill</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Refill ID</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="mb-10">Example response:</h5>
+                                    <div class="api-code-box">
+                                        <pre>
+        {
+           "status": "Completed"
+        }
+                                </pre>
+                                        <div class="editor-dots">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-50">
+                            <div class="card-header pb-0 border-0">
+                                <h5 class="mb-0">SERVICE LIST</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="cmn-table">
+                                    <div class="table-responsive overflow-hidden">
+                                        <table class="table table-striped align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Parameter</th>
+                                                    <th scope="col">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>key</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>Your API key</span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-label="Transaction ID"><span>action</span></td>
+                                                    <td data-label="Gateway">
+                                                        <span>services</span>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="mb-10">Example response:</h5>
+                                    <div class="api-code-box">
+                                        <pre>
+        [
+           {
+              "service": 1,
+              "name": "🙋‍♂️ Followers [Ultra-High Quality Profiles]",
+              "category": "🥇 [VIP]\r\n",
+              "rate": "4.80",
+              "min": 100,
+              "max": 10000
+           },
+           {
+              "service": 11,
+              "name": "🧨 Instagram Power Comments (100k+ Accounts) ➡️ [3 Comments]",
+              "category": "💬 Instagram - Verified / Power Comments [ Own Service ]",
+              "rate": "0.60",
+              "min": 500,
+              "max": 5000
+           },
+           {
+              "service": 52,
+              "name": "🎙️ Facebook Live Stream Views ➡️ [ 120 Min ]",
+              "category": "🔵 Facebook - Live Stream Views\r\n",
+              "rate": "57.60",
+              "min": 50,
+              "max": 2000
+           }
+        ]
+                                </pre>
+                                        <div class="editor-dots">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Main section start -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Offcanvas sidebar start -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Product Filter</h5>
+            <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-light fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <div class="row g-4">
+                    <div>
+                        <label for="ProductName" class="form-label">Product Name</label>
+                        <input type="text" class="form-control" id="ProductName">
+                    </div>
+                    <div>
+                        <label for="NumberOfSales" class="form-label">Number of sales</label>
+                        <input type="text" class="form-control" id="NumberOfSales">
+                    </div>
+                    <div id="formModal">
+                        <label class="form-label">status</label>
+                        <select class="modal-select" name="state">
+                            <option value="AL">All status</option>
+                            <option value="AL">Bangladesh</option>
+                            <option value="WY">Australia</option>
+                            <option value="WY">Belarus</option>
+                            <option value="WY">Canada</option>
+                            <option value="WY">China</option>
+                            <option value="WY">France</option>
+                            <option value="WY">Germany</option>
+                            <option value="WY">India</option>
+                            <option value="WY">Indonesia</option>
+                            <option value="WY">Italy</option>
+                            <option value="WY">Japan</option>
+                            <option value="WY">Korea</option>
+                        </select>
+                    </div>
+                    <div class="btn-area">
+                        <button type="submit" class="cmn-btn">Filter</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- Offcanvas sidebar end -->
+
+    <!-- Modal section start -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-light fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Modal body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="cmn-btn" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal section end -->
+
+
+
+
+
+    <script>
+        // Generate api key
+        document.getElementById("generateBtn").addEventListener("click", function () {
+            const randomApiKey = generateRandomApiKey(20);
+            document.getElementById("referralURL").value = randomApiKey;
+        })
+        function generateRandomApiKey(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let apiKey = '';
+
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                apiKey += characters.charAt(randomIndex);
+            }
+            return apiKey;
+        }
+
+        // Copy api key
+        document.getElementById("copyBtn").addEventListener("click", () => {
+            let referralURL = document.getElementById("referralURL");
+            referralURL.select();
+            navigator.clipboard.writeText(referralURL.value)
+            if (referralURL.value) {
+                document.getElementById("copyBtn").innerHTML = '<i class="fa-regular fa-circle-check"></i> Copied';
+                setTimeout(() => {
+                    document.getElementById("copyBtn").innerHTML = '<i class="fa-regular fa-copy"></i>copy';
+                }, 1000)
+            }
+        })
+    </script>
+
+
+
+
+
+    <!-- Jquery Js link -->
+    <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+
+    <!-- Main Js slink -->
+    <script src="assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

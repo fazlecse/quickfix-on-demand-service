@@ -1,55 +1,37 @@
 /*----------------------------------------------
 Typography 
 ----------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --heading-font: "El Messiri", sans-serif;
-    --body-font: "Nunito Sans", sans-serif;
-    --primary-color: 179, 189, 44;
+    --heading-font: "Biryani", sans-serif;
+    --body-font: "Roboto", sans-serif;
     --primary-color: 0, 181, 63;
-    --body-color: 51, 51, 51;
-    --heading-color: 5, 11, 32;
-    --black: 5, 11, 32;
+    --body-color: 68, 67, 67;
+    --heading-color: 40, 36, 31;
+    --black: 0, 0, 0;
     --grayish-blue: #929cbf;
     --white: #ffffff;
-    --soft-blue: #C1BFFD;
-    --grayish-violet: #f5f4f7;
     --dark-gray: #2d261f;
-    --soft-green: #ccf888;
     --soft-red: 216, 42, 104;
-    --lime-gray: #d0d0d0;
     --lime-green: 50, 205, 50;
-    --vivid-red: 246, 22, 39;
-    --vivid-orange: #FFB61C;
     --soft-magenta: 204, 84, 244;
-    --light-blue: #3866ff;
-    --yellow: #FCDA69;
     --orange: 255, 200, 62;
     --input-color: #ffffff;
-    --input-color2: #ffffff;
-
-
     --bg-color1: #ffffff;
-    --bg-color2: #FBFBF4;
+    --bg-color2: #F7FDF9;
     --bg-color3: #050B20;
     --bg-color4: #EDEEF2;
-
     --border-color1: rgba(231, 234, 243, .7);
     --border-color2: rgba(140, 152, 164, .25);
-
     --shadow1: 0 0.375rem 0.75rem rgba(140, 152, 164, .075);
     --shadow2: 0 .1875rem .75rem rgba(140, 152, 164, .25);
     --shadow3: 0 0.6125rem 2.5rem 0.6125rem rgba(140, 152, 164, .175);
     --transition: all .3s ease-in-out;
-
     --white: 255, 255, 255;
-    --very-light-violet: 180, 148, 255;
-    --very-light-orange: 255, 188, 110;
-    --moderate-cyan: 69, 198, 168;
 
-
-    // primary-color: #ae8656
+    // primary: #00b53f;
 }
 
 
@@ -310,7 +292,7 @@ textarea.form-control {
     height: 40px;
 
     &:hover label {
-        background: var(--btn-hover-bg);
+        background: rgb(var(--primary-color), 0.8);
     }
 
     label {
@@ -2391,6 +2373,7 @@ Chat section start
                     font-size: 16px;
                     font-weight: 700;
                     color: rgb(var(--heading-color));
+                    font-family: var(--heading-font);
                 }
 
                 .description {
@@ -2587,11 +2570,11 @@ Chat section start
                     color: rgb(var(--heading-color));
                     font-size: 14px;
                     margin-bottom: 5px;
+                    font-family: var(--heading-font);
                 }
 
                 .chat-info {
                     font-size: 14px;
-                    font-weight: 500;
                     display: flex;
                     justify-content: space-between;
                 }
@@ -4208,7 +4191,7 @@ Account settings profile section start
                 box-shadow: var(--shadow2);
 
                 &:hover {
-                    background: var(--btn-hover-bg);
+                    background: rgb(var(--primary-color), 0.8);
                 }
             }
         }

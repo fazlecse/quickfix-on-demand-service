@@ -40,19 +40,24 @@ $(document).ready(function () {
         dotsEach: 3,
       },
       375: {
-        items: 1,
+        items: 2,
         nav: true,
         dots: false,
         dotsEach: 2,
       },
       768: {
-        items: 2,
+        items: 3,
         nav: true,
         dots: false,
         margin: 15,
       },
       992: {
-        items: 2,
+        items: 4,
+        nav: true,
+        dots: false,
+      },
+      1200: {
+        items: 5,
         nav: true,
         dots: false,
       },
@@ -192,7 +197,6 @@ $(document).ready(function () {
       });
   });
   // Round button animation end
-  AOS.init();
 });
 // Fancybox carousel section start
 if ($(".fancybox-carousel-section").length) {

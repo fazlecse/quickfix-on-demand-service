@@ -20,8 +20,7 @@
   <link rel="stylesheet" href="assets/css/select2.min.css" />
   <!-- swiper Css link -->
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-  <!-- aos Css link -->
-  <link rel="stylesheet" href="assets/css/aos.css" />
+
   <!-- Style Css link -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -68,12 +67,10 @@
             <a class="nav-link cmn-btn" href="login.html">
               <div class="btn-wrapper h-45">
                 <div class="main-text btn-single h-45">
-                  <span class="d-none d-md-block">login</span>
-                  <span class="d-md-none"><i class="fa-regular fa-phone"></i></span>
+                  login
                 </div>
                 <div class="hover-text btn-single h-45">
-                  <span class="d-none d-md-block">login</span>
-                  <span class="d-md-none"><i class="fa-regular fa-phone"></i></span>
+                  login
                 </div>
               </div>
             </a>
@@ -108,12 +105,12 @@
   <!-- Products section start -->
   <section class="products-section">
     <div class="container">
-      <div class="mb-50">
-        <div class="row">
-          <div class="col-lg-7">
-            <h3>All services</h3>
+      <div class="top-bar">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7 col-md-5">
+            <h3 class="mb-0">All services</h3>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-5 col-md-7">
             <div class="adv-search-box">
               <div class="adv-search">
                 <input type="text" id="search-input" class="form-control" placeholder="Search area">
@@ -181,7 +178,7 @@
         </div>
       </div>
       <div class="row g-4 g-xl-5">
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-n5 mt-lg-0">
           <div class="sidebar">
             <ul class="sidebar-nav" id="sidebar-nav">
               <li class="nav-item">
@@ -245,16 +242,21 @@
                 </a>
               </li>
             </ul>
+            <div class="sidebar-close-btn"><i class="fa-regular fa-close"></i></div>
           </div>
+          <div class="sidebar-overlay"></div>
         </div>
         <div class="col-lg-9">
+          <button type="button" class="toggle-sidebar-btn mb-30" href="">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
           <div data-bs-spy="scroll" data-bs-target="#sidebar-nav" data-bs-offset="0" data-bs-smooth-scroll="true"
             class="scrollspy-example" tabindex="0">
 
             <div id="AC-Repair-Services" class="service-category-section">
               <h4 class="mb-25">AC Repair Services</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1731928932_acservicing.jpg" alt="">
@@ -274,7 +276,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1733298388_acdoctor.jpg" alt="">
@@ -294,7 +296,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-installation.png" alt="">
@@ -314,7 +316,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-gas-refilling.png" alt="">
@@ -334,7 +336,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-cleaning-servicing.png" alt="">
@@ -354,7 +356,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-remote-accessories.png" alt="">
@@ -380,7 +382,7 @@
             <div id="Appliance-Repair" class="service-category-section">
               <h4 class="mb-25">Appliance Repair</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732188449_appliancecheckupcombopackage.jpg" alt="">
@@ -400,7 +402,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732187020_ovenservices.jpg" alt="">
@@ -420,7 +422,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732187164_tvservices.jpg" alt="">
@@ -440,7 +442,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/refrigerator-repair.png" alt="">
@@ -460,7 +462,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/microwave-oven-repair.png" alt="">
@@ -480,7 +482,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/geyser-repair-services.png" alt="">
@@ -506,7 +508,7 @@
             <div id="Cleaning-Solution" class="service-category-section">
               <h4 class="mb-25">Cleaning Solution</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/Service-2023-05-24-11-33-28-9583.webp" alt="">
@@ -526,7 +528,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732001947_outdoorcleaning.jpg" alt="">
@@ -546,7 +548,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732001256_cleaningcombopackage.jpg" alt="">
@@ -566,7 +568,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/office-cleaning.png" alt="">
@@ -586,7 +588,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/sofa-carpet-cleaning.png" alt="">
@@ -606,7 +608,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/kitchen-chimney-cleaning.png" alt="">
@@ -631,7 +633,7 @@
             <div id="Beauty-Wellness" class="service-category-section">
               <h4 class="mb-25">Beauty & Wellness</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1731928932_acservicing.jpg" alt="">
@@ -651,7 +653,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1733298388_acdoctor.jpg" alt="">
@@ -671,7 +673,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-installation.png" alt="">
@@ -691,7 +693,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-gas-refilling.png" alt="">
@@ -711,7 +713,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-cleaning-servicing.png" alt="">
@@ -731,7 +733,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-remote-accessories.png" alt="">
@@ -757,7 +759,7 @@
             <div id="Shifting" class="service-category-section">
               <h4 class="mb-25">Shifting</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732188449_appliancecheckupcombopackage.jpg" alt="">
@@ -777,7 +779,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732187020_ovenservices.jpg" alt="">
@@ -797,7 +799,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732187164_tvservices.jpg" alt="">
@@ -817,7 +819,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/refrigerator-repair.png" alt="">
@@ -837,7 +839,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/microwave-oven-repair.png" alt="">
@@ -857,7 +859,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/geyser-repair-services.png" alt="">
@@ -883,7 +885,7 @@
             <div id="Mens-Salon" class="service-category-section">
               <h4 class="mb-25">Men's Care & Salon</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/Service-2023-05-24-11-33-28-9583.webp" alt="">
@@ -903,7 +905,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732001947_outdoorcleaning.jpg" alt="">
@@ -923,7 +925,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732001256_cleaningcombopackage.jpg" alt="">
@@ -943,7 +945,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/office-cleaning.png" alt="">
@@ -963,7 +965,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/sofa-carpet-cleaning.png" alt="">
@@ -983,7 +985,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/kitchen-chimney-cleaning.png" alt="">
@@ -1008,7 +1010,7 @@
             <div id="Health-Care" class="service-category-section">
               <h4 class="mb-25">Health & Care</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1731928932_acservicing.jpg" alt="">
@@ -1028,7 +1030,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1733298388_acdoctor.jpg" alt="">
@@ -1048,7 +1050,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-installation.png" alt="">
@@ -1068,7 +1070,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-gas-refilling.png" alt="">
@@ -1088,7 +1090,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-cleaning-servicing.png" alt="">
@@ -1108,7 +1110,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-remote-accessories.png" alt="">
@@ -1134,7 +1136,7 @@
             <div id="Electronics-Gadgets-Repair" class="service-category-section">
               <h4 class="mb-25">Electronics & Gadgets Repair</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732188449_appliancecheckupcombopackage.jpg" alt="">
@@ -1153,7 +1155,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732187020_ovenservices.jpg" alt="">
@@ -1173,7 +1175,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732187164_tvservices.jpg" alt="">
@@ -1193,7 +1195,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/refrigerator-repair.png" alt="">
@@ -1213,7 +1215,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/microwave-oven-repair.png" alt="">
@@ -1233,7 +1235,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/geyser-repair-services.png" alt="">
@@ -1259,7 +1261,7 @@
             <div id="Electric-Plumbing" class="service-category-section">
               <h4 class="mb-25">Electric & Plumbing</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/Service-2023-05-24-11-33-28-9583.webp" alt="">
@@ -1278,7 +1280,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732001947_outdoorcleaning.jpg" alt="">
@@ -1298,7 +1300,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732001256_cleaningcombopackage.jpg" alt="">
@@ -1318,7 +1320,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/office-cleaning.png" alt="">
@@ -1338,7 +1340,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/sofa-carpet-cleaning.png" alt="">
@@ -1358,7 +1360,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/kitchen-chimney-cleaning.png" alt="">
@@ -1383,7 +1385,7 @@
             <div id="Pest-Control" class="service-category-section">
               <h4 class="mb-25">Pest Control</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1731928932_acservicing.jpg" alt="">
@@ -1403,7 +1405,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1733298388_acdoctor.jpg" alt="">
@@ -1423,7 +1425,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-installation.png" alt="">
@@ -1443,7 +1445,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-gas-refilling.png" alt="">
@@ -1463,7 +1465,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-cleaning-servicing.png" alt="">
@@ -1483,7 +1485,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/ac-remote-accessories.png" alt="">
@@ -1509,7 +1511,7 @@
             <div id="Driver-Service" class="service-category-section">
               <h4 class="mb-25">Driver Service</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732188449_appliancecheckupcombopackage.jpg" alt="">
@@ -1528,7 +1530,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732187020_ovenservices.jpg" alt="">
@@ -1548,7 +1550,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732187164_tvservices.jpg" alt="">
@@ -1568,7 +1570,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/refrigerator-repair.png" alt="">
@@ -1588,7 +1590,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/microwave-oven-repair.png" alt="">
@@ -1608,7 +1610,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/geyser-repair-services.png" alt="">
@@ -1634,7 +1636,7 @@
             <div id="Car-Care-Services" class="service-category-section">
               <h4 class="mb-25">Car Care Services</h4>
               <div class="row g-4 gy-md-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/Service-2023-05-24-11-33-28-9583.webp" alt="">
@@ -1653,7 +1655,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732001947_outdoorcleaning.jpg" alt="">
@@ -1673,7 +1675,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/1732001256_cleaningcombopackage.jpg" alt="">
@@ -1693,7 +1695,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/office-cleaning.png" alt="">
@@ -1713,7 +1715,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/sofa-carpet-cleaning.png" alt="">
@@ -1733,7 +1735,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="product-box">
                     <a href="product-details.html" class="img-box">
                       <img src="./assets/img/product/kitchen-chimney-cleaning.png" alt="">
@@ -1977,10 +1979,45 @@
   <script src="assets/js/jquery.waypoints.min.js"></script>
   <!-- Swiper Js link -->
   <script src="assets/js/swiper-bundle.min.js"></script>
-  <!-- aos Js link -->
-  <script src="assets/js/aos.js"></script>
+
   <!-- Main Js link -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // custom sidebar
+    // Sidebar elements
+    const customSidebar = document.querySelector('.sidebar');
+    const toggleSidebarBtn = document.querySelector('.toggle-sidebar-btn');
+    const sidebarCloseBtn = document.querySelector('.sidebar-close-btn');
+    const sidebarOverlay = document.querySelector('.sidebar-overlay');
+    const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+
+    // Helper function to close sidebar
+    function closeSidebar() {
+      customSidebar.classList.remove('show');
+      sidebarOverlay.classList.remove('show');
+    }
+
+    // Toggle sidebar open
+    toggleSidebarBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      customSidebar.classList.toggle('show');
+      sidebarOverlay.classList.toggle('show');
+    });
+
+    // Close sidebar on close button or nav link click
+    [sidebarCloseBtn, ...navLinks].forEach((el) => {
+      el.addEventListener('click', closeSidebar);
+    });
+
+    // Close sidebar on outside click
+    window.addEventListener('click', (e) => {
+      if (!customSidebar.contains(e.target) && !toggleSidebarBtn.contains(e.target)) {
+        closeSidebar();
+      }
+    });
+
+  </script>
 </body>
 
 </html>
