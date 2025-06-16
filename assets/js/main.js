@@ -162,41 +162,82 @@ $(document).ready(function () {
     dropdownParent: $("#formModal"),
   });
   // cmn select2 modal start
-  // Range area start
-  if ($(".js-range-slider").length) {
-    $(".js-range-slider").ionRangeSlider({
-      type: "double",
-      min: 0,
-      max: 100,
-      from: 800,
-      to: 500,
-      grid: true,
-    });
-  }
-  // Range area end
   if ($("#myID").length) {
     flatpickr("#myID", {
       inline: true,
       dateFormat: "d-m-Y",
     });
   }
-  // Round button animation start
-  $(function () {
-    $(".round-btn")
-      .on("mouseenter", function (e) {
-        var parentOffset = $(this).offset(),
-          relX = e.pageX - parentOffset.left,
-          relY = e.pageY - parentOffset.top;
-        $(this).find("span").css({ top: relY, left: relX });
-      })
-      .on("mouseout", function (e) {
-        var parentOffset = $(this).offset(),
-          relX = e.pageX - parentOffset.left,
-          relY = e.pageY - parentOffset.top;
-        $(this).find("span").css({ top: relY, left: relX });
+
+  // Isotope start
+  if ($(".listing-row").length) {
+    $(document).ready(function () {
+      var $grid = $(".listing-row").isotope({
+        itemSelector: ".grid-item",
+        percentPosition: true,
+        masonry: {
+          columnWidth: 1,
+        },
       });
-  });
-  // Round button animation end
+
+      var selectedFilter = localStorage.getItem("selectedFilter") || ".all";
+      $grid.isotope({ filter: selectedFilter });
+
+      $(".isotope-btn-group button").removeClass("active");
+      $(
+        '.isotope-btn-group button[data-filter="' + selectedFilter + '"]'
+      ).addClass("active");
+
+      $(".isotope-btn-group").on("click", "button", function () {
+        var filterValue = $(this).attr("data-filter");
+        $grid.isotope({ filter: filterValue });
+        localStorage.setItem("selectedFilter", filterValue);
+
+        $(this).siblings(".active").removeClass("active");
+        $(this).addClass("active");
+      });
+
+      $grid.isotope("layout");
+
+      $(".form-check-input").on("change", function () {
+        $(".review-single-hidden-box").toggle(this.checked);
+        $grid.isotope("layout");
+      });
+    });
+  }
+  // Isotope ends
+
+  // Progressbar animation start
+  if ($(".progress-bar").length) {
+    const progressItem = document.getElementsByClassName("progress-item")[0];
+    const progressBars = document.querySelectorAll(".progress-bar");
+
+    function showProgress() {
+      progressBars.forEach((progressBar) => {
+        const value = progressBar.dataset.progress;
+        progressBar.style.opacity = 1;
+        progressBar.style.width = `${value}%`;
+      });
+    }
+
+    function hideProgress() {
+      progressBars.forEach((p) => {
+        p.style.opacity = 0;
+        p.style.width = 0;
+      });
+    }
+
+    window.addEventListener("scroll", () => {
+      const sectionPos = progressItem.getBoundingClientRect().top;
+      const screenPos = window.innerHeight;
+      if (sectionPos < screenPos) {
+        showProgress();
+      } else {
+        hideProgress();
+      }
+    });
+  }
+// Progressbar animation end
 });
 // Fancybox carousel section start
 if ($(".fancybox-carousel-section").length) {
@@ -240,13 +281,6 @@ const tooltipTriggerList = document.querySelectorAll(
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
-// Counter start
-if ($(".statistics-counter").length) {
-  $(".statistics-counter").counterUp({
-    delay: 10,
-    time: 2000,
-  });
-}
 // Copy text start
 function copyTextFunc() {
   const element = document.querySelector(".docs-code");
@@ -320,32 +354,6 @@ if (document.querySelector(".login-register-form")) {
   });
 }
 // input field show hide password end
-
-// Custom dropdown start
-document.addEventListener("DOMContentLoaded", function () {
-  function toggleDropdownAttributes() {
-    const dropdowns = document.querySelectorAll(".custom-dropdown > a"); // Select all dropdown links
-
-    dropdowns.forEach((dropdown) => {
-      if (window.innerWidth >= 992) {
-        dropdown.removeAttribute("role");
-        dropdown.removeAttribute("data-bs-toggle");
-        dropdown.removeAttribute("aria-expanded");
-      } else {
-        dropdown.setAttribute("role", "button");
-        dropdown.setAttribute("data-bs-toggle", "dropdown");
-        dropdown.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  // Run on page load
-  toggleDropdownAttributes();
-
-  // Run on window resize
-  window.addEventListener("resize", toggleDropdownAttributes);
-});
-// Custom dropdown end
 
 // Dropdown select with Filter end
 if ($(".search-box2").length) {

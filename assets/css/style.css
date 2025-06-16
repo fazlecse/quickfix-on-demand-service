@@ -807,6 +807,11 @@ body::-webkit-scrollbar-thumb:hover {
   padding-top: 0;
 }
 
+.rtl .accordion-button::after {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 .video-box {
   position: relative;
 }
@@ -4703,13 +4708,15 @@ Cmn table end
   transition: var(--transition);
   font-size: 16px;
   color: rgb(var(--heading-color));
+  background-color: rgb(var(--primary-color), 0.1);
 }
 .isotope-btn-group button:hover {
-  background-color: rgb(var(--white), 0.8);
+  background-color: rgb(var(--primary-color), 0.8);
+  color: rgb(var(--white));
 }
 .isotope-btn-group button.active {
-  background-color: rgb(var(--white));
-  color: rgb(var(--heading-color));
+  background-color: rgb(var(--primary-color));
+  color: rgb(var(--white));
 }
 .isotope-btn-group button.active:hover {
   background-position: center right;
@@ -5933,6 +5940,15 @@ Category section end
     z-index: 1024;
   }
 }
+.rtl .sidebar-nav .nav-link {
+  border-right: 0;
+  border-left: 5px solid transparent;
+}
+.rtl .sidebar-nav .nav-link.active {
+  border-right: 0;
+  border-left: 5px solid rgb(var(--primary-color));
+}
+
 /*----------------------------------------------
 Products section end
 ----------------------------------------------*/
@@ -6024,24 +6040,15 @@ Products section end
     margin-top: 0;
   }
 }
-/*----------------------------------------------
-Product details section end
-----------------------------------------------*/
-/*----------------------------------------------
-00. Profile section start
-----------------------------------------------*/
-/*----------------------------------------------
-Profile section end
-----------------------------------------------*/
-/*----------------------------------------------
-00. Our vision section start
-----------------------------------------------*/
-.our-vision-section {
-  background-color: var(--bg-color2);
+@media (min-width: 1440px) {
+  .rtl .product-details-section .side-box {
+    margin-right: 0;
+    margin-left: -75px;
+  }
 }
 
 /*----------------------------------------------
-00. Our vision section end
+Product details section end
 ----------------------------------------------*/
 /*----------------------------------------------
 18. Blog section start
@@ -6670,24 +6677,6 @@ Banner end
 Contact section end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Map section start
-----------------------------------------------*/
-.map-section iframe {
-  margin-bottom: -7px;
-  width: 100%;
-  height: 490px;
-  background-color: rgb(var(--white));
-}
-
-@media (max-width: 575px) {
-  .map-section iframe {
-    height: 250px;
-  }
-}
-/*----------------------------------------------
-Map section end
-----------------------------------------------*/
-/*----------------------------------------------
 24. Login Signup section start
 ----------------------------------------------*/
 .login-register-section {
@@ -6900,4 +6889,138 @@ Policy section end
 }
 /*----------------------------------------------
 Error end
+----------------------------------------------*/
+/*----------------------------------------------
+Reviews details section start 
+----------------------------------------------*/
+.all-reviews-section {
+  background-color: rgb(var(--bg-color1));
+}
+.all-reviews-section .isotop-content {
+  background-color: rgb(var(--bg-color2));
+  border: 1px solid var(--border-color1);
+  padding: 25px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.sidebar-card-box {
+  background-color: var(--bg-color1);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color1);
+  box-shadow: var(--shadow1);
+  position: sticky;
+  top: 100px;
+}
+.sidebar-card-box .header-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid var(--border-color1);
+  padding-bottom: 20px;
+}
+.sidebar-card-box .header-box .img-box {
+  width: 90px;
+  min-width: 90px;
+  height: 100px;
+}
+.sidebar-card-box .header-box .img-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.reviews-rating-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.reviews-rating-box .item {
+  text-align: center;
+}
+
+.progress-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.progress-box .progress-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.progress-box .progress-item h6 {
+  max-width: 80px;
+  width: 100%;
+  font-size: 16px;
+}
+.progress-box .progress-item .progress {
+  width: 100%;
+  height: 5px;
+}
+.progress-box .progress-item .progress .progress-bar {
+  background-color: rgb(var(--primary-color));
+  transition: all 5s;
+}
+
+.reviews-single {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.reviews-single:not(:last-child) {
+  margin-bottom: 20px;
+}
+.reviews-single .left-side {
+  display: flex;
+  gap: 10px;
+  min-width: 215px;
+}
+.reviews-single .left-side .img-box {
+  width: 45px;
+  min-width: 45px;
+  height: 45px;
+}
+.reviews-single .left-side .img-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.reviews-single .left-side .text-box .title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.reviews-single .left-side .text-box .title h6 {
+  font-size: 16px;
+}
+.reviews-single .left-side .text-box .title i {
+  font-size: 15px;
+  color: rgb(var(--primary-color));
+}
+.reviews-single .left-side .text-box .contact-item {
+  font-size: 16px;
+}
+.reviews-single .right-side {
+  display: flex;
+  gap: 5px;
+}
+.reviews-single .right-side .reviews {
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .reviews-single {
+    flex-direction: column;
+  }
+  .reviews-single .right-side {
+    flex-direction: column;
+  }
+}
+/*----------------------------------------------
+Reviews details section end 
 ----------------------------------------------*/

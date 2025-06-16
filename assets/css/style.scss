@@ -766,6 +766,7 @@ body::-webkit-scrollbar-thumb {
 .owl-theme .owl-dots .owl-dot span {
   transition: all 0.5s ease-in-out;
 }
+
 // Owl carouse section start
 
 // Modal section start
@@ -836,7 +837,6 @@ body::-webkit-scrollbar-thumb {
 // Cmn btn end
 
 // Accordion section start
-
 .accordion-item {
   margin-bottom: 15px;
   border-radius: 10px;
@@ -889,6 +889,13 @@ body::-webkit-scrollbar-thumb {
 
 .accordion-body {
   padding-top: 0;
+}
+
+.rtl {
+  .accordion-button::after {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 
 // Accordion section end
@@ -1540,8 +1547,6 @@ Reusable style section start
   }
 
 }
-
-
 
 .rtl {
   .adv-search {
@@ -5739,14 +5744,16 @@ Cmn table end
     transition: var(--transition);
     font-size: 16px;
     color: rgb(var(--heading-color));
+    background-color: rgb(var(--primary-color), 0.1);
 
     &:hover {
-      background-color: rgb(var(--white), 0.8);
+      background-color: rgb(var(--primary-color), 0.8);
+      color: rgb(var(--white));
     }
 
     &.active {
-      background-color: rgb(var(--white));
-      color: rgb(var(--heading-color));
+      background-color: rgb(var(--primary-color));
+      color: rgb(var(--white));
 
       &:hover {
         background-position: center right;
@@ -6924,12 +6931,9 @@ Bottom Mobile, Tab nav end
 00. Hero section end
 ----------------------------------------------*/
 
-
 /*----------------------------------------------
 Category section start
 ----------------------------------------------*/
-// .category-section {
-// }
 
 .category-section-inner {
   background-color: var(--bg-color1);
@@ -6983,7 +6987,6 @@ Category section start
 
 }
 
-
 /*----------------------------------------------
 Category section end
 ----------------------------------------------*/
@@ -6998,12 +7001,7 @@ Category section end
 }
 
 .product-box {
-  // overflow: hidden;
-  // border: 1px solid var(--border-color1);
   display: block;
-  // padding: 5px;
-  // border-radius: 12px;
-  // background-color: var(--bg-color2);
 
   &:hover {
     .img-box {
@@ -7060,7 +7058,6 @@ Category section end
       display: flex;
       align-items: center;
       gap: 7px;
-      // color: rgb(var(--primary-color));
     }
 
     .price {
@@ -7198,8 +7195,6 @@ Category section end
     .sidebar-close-btn {
       display: flex;
     }
-
-
   }
 
   .sidebar-nav .nav-link {
@@ -7232,6 +7227,18 @@ Category section end
       visibility: visible;
       opacity: 1;
       z-index: 1024;
+    }
+  }
+}
+
+.rtl {
+  .sidebar-nav .nav-link {
+    border-right: 0;
+    border-left: 5px solid transparent;
+
+    &.active {
+      border-right: 0;
+      border-left: 5px solid rgb(var(--primary-color));
     }
   }
 }
@@ -7348,27 +7355,19 @@ Products section end
   }
 }
 
-/*----------------------------------------------
-Product details section end
-----------------------------------------------*/
-
-/*----------------------------------------------
-00. Profile section start
-----------------------------------------------*/
-
-/*----------------------------------------------
-Profile section end
-----------------------------------------------*/
-
-/*----------------------------------------------
-00. Our vision section start
-----------------------------------------------*/
-.our-vision-section {
-  background-color: var(--bg-color2);
+.rtl {
+  @media(min-width: 1440px) {
+    .product-details-section {
+      .side-box {
+        margin-right: 0;
+        margin-left: -75px;
+      }
+    }
+  }
 }
 
 /*----------------------------------------------
-00. Our vision section end
+Product details section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -7564,7 +7563,6 @@ Blog section end
       }
     }
   }
-
 }
 
 .blog-quote-box {
@@ -7608,7 +7606,6 @@ Blog section end
       left: 0;
 
     }
-
   }
 }
 
@@ -7619,7 +7616,6 @@ Blog section end
     text-transform: capitalize;
     margin-bottom: 10px;
   }
-
 }
 
 #shareBlock {
@@ -7679,7 +7675,6 @@ Blog section end
   }
 }
 
-
 .sidebar-widget-area {
   padding: 25px;
   background-color: var(--bg-color1);
@@ -7692,8 +7687,6 @@ Blog section end
     margin-bottom: 15px;
     text-transform: capitalize;
   }
-
-
 
   .sidebar-widget-item {
     display: flex;
@@ -7755,7 +7748,6 @@ Blog section end
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-
   }
 }
 
@@ -7782,7 +7774,6 @@ Blog section end
       margin-left: 0;
       margin-right: 15px;
     }
-
   }
 
   .sidebar-widget-area {
@@ -8172,32 +8163,6 @@ Contact section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-00. Map section start
-----------------------------------------------*/
-.map-section {
-  iframe {
-    margin-bottom: -7px;
-    width: 100%;
-    height: 490px;
-    background-color: rgb(var(--white));
-  }
-}
-
-// Responsive map section start
-@media(max-width:575px) {
-  .map-section {
-    iframe {
-      height: 250px;
-    }
-  }
-}
-
-// Responsive map section end
-/*----------------------------------------------
-Map section end
-----------------------------------------------*/
-
-/*----------------------------------------------
 24. Login Signup section start
 ----------------------------------------------*/
 .login-register-section {
@@ -8478,4 +8443,163 @@ Policy section end
 // Responsive error section end
 /*----------------------------------------------
 Error end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Reviews details section start 
+----------------------------------------------*/
+.all-reviews-section {
+  background-color: rgb(var(--bg-color1));
+
+  .isotop-content {
+    background-color: rgb(var(--bg-color2));
+    border: 1px solid var(--border-color1);
+    padding: 25px;
+    border-radius: 20px;
+    font-size: 16px;
+  }
+}
+
+.sidebar-card-box {
+  background-color: var(--bg-color1);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color1);
+  box-shadow: var(--shadow1);
+  position: sticky;
+  top: 100px;
+
+  .header-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid var(--border-color1);
+    padding-bottom: 20px;
+
+    .img-box {
+      width: 90px;
+      min-width: 90px;
+      height: 100px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.reviews-rating-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+
+  .item {
+    text-align: center;
+  }
+}
+
+.progress-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .progress-item {
+    h6 {
+      max-width: 80px;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .progress {
+      width: 100%;
+      height: 5px;
+
+      .progress-bar {
+        background-color: rgb(var(--primary-color));
+        transition: all 5s;
+      }
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+.reviews-single {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .left-side {
+    display: flex;
+    gap: 10px;
+    min-width: 215px;
+
+    .img-box {
+      width: 45px;
+      min-width: 45px;
+      height: 45px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .text-box {
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        h6 {
+          font-size: 16px;
+        }
+
+        i {
+          font-size: 15px;
+          color: rgb(var(--primary-color));
+        }
+      }
+
+      .contact-item {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .right-side {
+    display: flex;
+    gap: 5px;
+
+    .reviews {
+      font-size: 16px;
+    }
+  }
+}
+
+// Responsive reviews section start
+@media (max-width: 767px) {
+  .reviews-single {
+    flex-direction: column;
+
+    .right-side {
+      flex-direction: column;
+    }
+  }
+}
+
+// Responsive reviews section end
+/*----------------------------------------------
+Reviews details section end 
 ----------------------------------------------*/
