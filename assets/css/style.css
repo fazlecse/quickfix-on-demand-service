@@ -2385,6 +2385,23 @@ Offcanvas end
   color: rgb(var(--heading-color), 0.8);
 }
 
+.lang-currency-btn {
+  padding: 9px 7px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.lang-currency-btn img {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+}
+
 /*----------------------------------------------
 Alerts section start 
 ----------------------------------------------*/
@@ -5777,6 +5794,8 @@ Category section end
 .product-box .text-box .author {
   font-weight: 500;
   color: rgb(var(--primary-color));
+  display: block;
+  margin-bottom: 10px;
 }
 .product-box .text-box .title {
   font-size: 18px;
@@ -5791,11 +5810,15 @@ Category section end
   -webkit-line-clamp: 2;
   line-clamp: 2;
 }
+.product-box .text-box .title:hover {
+  color: rgb(var(--primary-color));
+}
 .product-box .text-box .location {
   text-transform: capitalize;
   display: flex;
   align-items: center;
   gap: 7px;
+  margin-top: 5px;
 }
 .product-box .text-box .price {
   display: flex;
