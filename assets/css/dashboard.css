@@ -21,7 +21,7 @@ Typography
   --bg-color2: #F7FDF9;
   --bg-color3: #050B20;
   --bg-color4: #EDEEF2;
-  --border-color1: rgba(231, 234, 243, .7);
+  --border-color1: rgba(231, 234, 243, 0.7);
   --border-color2: rgba(140, 152, 164, .25);
   --shadow1: 0 0.375rem 0.75rem rgba(140, 152, 164, .075);
   --shadow2: 0 .1875rem .75rem rgba(140, 152, 164, .25);
@@ -1023,63 +1023,178 @@ Offcanvas section end
 Cmn btn start
 ----------------------------------------------*/
 .cmn-btn {
-  background: rgb(var(--primary-color));
-  padding: 8px 15px;
-  border-radius: 9999px;
-  border: 1px solid transparent;
+  background-color: rgb(var(--primary-color));
+  padding: 0 24px;
   transition: var(--transition);
   font-size: 16px;
   color: rgb(var(--white));
   display: inline-flex;
-  align-items: center;
   justify-content: center;
-  font-weight: 500;
   text-transform: capitalize;
   gap: 5px;
+  font-weight: 500;
+  border-radius: 99999px;
 }
 .cmn-btn:hover {
   color: rgb(var(--white));
-  background: rgb(var(--primary-color), 0.8);
+}
+.cmn-btn:hover .btn-wrapper .main-text {
+  transform: translateY(-130%) translateZ(0);
+}
+.cmn-btn:hover .btn-wrapper .hover-text {
+  transform: translateY(0) translateZ(0);
+}
+.cmn-btn .btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  pointer-events: none;
+  gap: 8px;
+  height: 52px;
+}
+.cmn-btn .btn-wrapper .btn-single {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  pointer-events: none;
+  gap: 8px;
+  height: 52px;
+}
+.cmn-btn .btn-wrapper .main-text {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.5s;
+}
+.cmn-btn .btn-wrapper .hover-text {
+  position: absolute;
+  left: 0;
+  transform: translateY(130%) translateZ(0);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.5s;
+}
+
+.rtl .cmn-btn i {
+  transform: rotate(180deg);
 }
 
 .cmn-btn2 {
-  background-color: var(--black);
-  padding: 10px 20px;
+  position: relative;
+  z-index: 1;
+  color: rgb(var(--white));
+  background-color: rgb(var(--heading-color));
+  padding: 0 24px;
   border-radius: 9999px;
-  border: 1px solid var(--border-color1);
   transition: var(--transition);
   font-size: 16px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
   font-weight: 500;
   text-transform: capitalize;
-  color: rgb(var(--primary-color));
+  gap: 5px;
 }
 .cmn-btn2:hover {
-  color: rgb(var(--primary-color));
-  box-shadow: var(--shadow1);
+  color: rgb(var(--white));
+}
+.cmn-btn2:hover .btn-wrapper .main-text {
+  transform: translateY(-130%) translateZ(0);
+}
+.cmn-btn2:hover .btn-wrapper .hover-text {
+  transform: translateY(0) translateZ(0);
+}
+.cmn-btn2 .btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  pointer-events: none;
+  gap: 8px;
+  height: 52px;
+}
+.cmn-btn2 .btn-wrapper .btn-single {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  pointer-events: none;
+  gap: 8px;
+  height: 52px;
+}
+.cmn-btn2 .btn-wrapper .main-text {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.5s;
+}
+.cmn-btn2 .btn-wrapper .hover-text {
+  position: absolute;
+  left: 0;
+  transform: translateY(130%) translateZ(0);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.5s;
 }
 
 .cmn-btn3 {
   position: relative;
-  padding: 8px 15px;
-  background: rgb(var(--white));
-  border-radius: 9999px;
-  border: 2px solid rgb(var(--primary-color));
+  z-index: 1;
+  color: rgb(var(--primary-color));
+  border: 1px solid rgb(var(--primary-color));
+  padding: 0 24px;
   transition: var(--transition);
   font-size: 16px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
-  gap: 10px;
+  gap: 5px;
+  border-radius: 9999px;
 }
-.cmn-btn3:hover {
-  color: rgb(var(--white));
-  background-color: rgb(var(--primary-color));
+.cmn-btn3:hover .btn-wrapper .main-text {
+  transform: translateY(-130%) translateZ(0);
+}
+.cmn-btn3:hover .btn-wrapper .hover-text {
+  transform: translateY(0) translateZ(0);
+}
+.cmn-btn3 .btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  pointer-events: none;
+  gap: 8px;
+  height: 3rem;
+}
+.cmn-btn3 .btn-wrapper .btn-single {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  pointer-events: none;
+  gap: 8px;
+  height: 3rem;
+}
+.cmn-btn3 .btn-wrapper .main-text {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.5s;
+}
+.cmn-btn3 .btn-wrapper .hover-text {
+  position: absolute;
+  left: 0;
+  transform: translateY(130%) translateZ(0);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.5s;
 }
 
 .cmn-btn5 {
@@ -4355,3 +4470,51 @@ Property section end
   border-radius: 5px;
   color: rgb(var(--primary-color));
 }
+
+/*----------------------------------------------
+Pricing section start
+----------------------------------------------*/
+.pricing-box {
+  padding: 40px 24px;
+  border-radius: 20px;
+  background-image: linear-gradient(182deg, rgb(var(--primary-color), 0.2), transparent);
+  text-align: center;
+  height: 100%;
+}
+.pricing-box.free {
+  background: transparent;
+}
+.pricing-box .title {
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--border-color2);
+  padding-bottom: 10px;
+  font-family: var(--heading-font);
+}
+.pricing-box .price-title {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(var(--heading-color));
+  margin-top: 20px;
+  font-family: var(--heading-font);
+}
+
+.pricing-feature {
+  text-align: center;
+}
+.pricing-feature li {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-transform: capitalize;
+  color: rgb(var(--heading-color));
+  font-family: var(--heading-font);
+}
+.pricing-feature li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/*----------------------------------------------
+Pricing section end
+----------------------------------------------*/

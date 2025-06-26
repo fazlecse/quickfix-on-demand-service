@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChainCity</title>
-    <!-- Favicon link -->
+    <!-- Favicon-link -->
     <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
     <!-- Fontawesome-6 Js link -->
     <link rel="stylesheet" href="assets/css/all.min.css">
@@ -20,15 +20,18 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- select2 Css link -->
     <link rel="stylesheet" href="assets/css/select2.min.css">
-
-
-
+    <!-- Jquery UI Css link -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.structure.min.css">
+    <!-- Line progressbar Css link -->
+    <link rel="stylesheet" href="assets/css/jquery.lineProgressbar.css">
     <!-- Style Css link -->
     <link rel="stylesheet" href="assets/css/dashboard.css">
 
 </head>
 
 <body onload="preloaderFunction()" class="">
+
     <div class="dashboard-wrapper">
         <!-- Preloader section start -->
         <div id="preloader">
@@ -369,187 +372,68 @@
         </aside>
         <!-- Sidebar section end -->
 
-        <main id="main" class="main bg-color2">
+        <main id="main" class="main">
             <div class="main-wrapper">
-                <div class="pagetitle">
-                    <nav>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">Profile</li>
-                        </ol>
-                    </nav>
-                </div>
-                <!-- End Page Title -->
-                <div class="row">
-                    <!-- Account-settings -->
-                    <!-- Account settings navbar start -->
-                    <div class="account-settings-navbar">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="account-settings-profile.html"><i
-                                        class="fa-light fa-user"></i>profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#"><i class="fa-light fa-bell"></i>Notification</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="account-settings-identity-verification.html"><i
-                                        class="fa-light fa-link"></i> Identity Verification</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Account settings navbar end -->
-
-                    <form>
-                        <div class="account-settings-profile-section">
-                            <div class="card">
-                                <div class="card-header border-0">
-                                    <h5 class="card-title">Recent Devices</h5>
-                                </div>
-                                <div class="card-body pt-0">
-                                    <p>We need permission from your browser to show notifications. <strong>Request
-                                            Permission</strong>
-                                    </p>
-                                    <!-- Cmn table start -->
-                                    <div class="cmn-table mt-20">
-                                        <div class="table-responsive">
-                                            <table class="table align-middle">
-                                                <thead>
-                                                    <tr>
-                                                        <th style="width: 15%;" scope="col">Type</th>
-                                                        <th style="width: 5%;" scope="col">✉️ Email</th>
-                                                        <th style="width: 5%;" scope="col">🖥 Browser</th>
-                                                        <th style="width: 3%;" scope="col">👩🏻‍💻 App</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td data-label="Type">
-                                                            <div class="d-flex align-items-center">
-                                                                <span>New for you</span>
-                                                            </div>
-
-                                                        </td>
-                                                        <td data-label="✉️ Email">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked" checked>
-                                                            </div>
-                                                        </td>
-                                                        <td data-label="🖥 Browser">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked2" checked>
-                                                            </div>
-                                                        </td>
-
-                                                        <td data-label="👩🏻‍💻 App">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked3" checked>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td data-label="Type">
-                                                            <div class="d-flex align-items-center">
-                                                                <span>Account activity
-                                                                </span>
-                                                            </div>
-
-                                                        </td>
-                                                        <td data-label="✉️ Email">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked4" checked>
-                                                            </div>
-                                                        </td>
-                                                        <td data-label="🖥 Browser">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked5" checked>
-                                                            </div>
-                                                        </td>
-
-                                                        <td data-label="👩🏻‍💻 App">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked6" checked>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td data-label="Type">
-                                                            <div class="d-flex align-items-center">
-                                                                <span>A new browser used to sign in</span>
-                                                            </div>
-
-                                                        </td>
-                                                        <td data-label="✉️ Email">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked7" checked>
-                                                            </div>
-                                                        </td>
-                                                        <td data-label="🖥 Browser">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked8" checked>
-                                                            </div>
-                                                        </td>
-
-                                                        <td data-label="👩🏻‍💻 App">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked9">
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td data-label="Type">
-                                                            <div class="d-flex align-items-center">
-                                                                <span>A new device is linked</span>
-                                                            </div>
-
-                                                        </td>
-                                                        <td data-label="✉️ Email">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked10" checked>
-                                                            </div>
-                                                        </td>
-                                                        <td data-label="🖥 Browser">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked11">
-                                                            </div>
-                                                        </td>
-
-                                                        <td data-label="👩🏻‍💻 App">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    role="switch" id="flexSwitchCheckChecked12">
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <!-- Cmn table end -->
-                                </div>
-
+                <div class="mt-30">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                            <div class="pricing-box free">
+                                <div class="title">starter </div>
+                                <div class="price-title">free</div>
+                                <ul class="pricing-feature mt-20">
+                                    <li>Simultaneous Streams 1</li>
+                                    <li>Download available</li>
+                                    <li>No. of Devices 3</li>
+                                </ul>
                             </div>
                         </div>
-                    </form>
+                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                            <div class="pricing-box">
+                                <div class="title">professional </div>
+                                <div class="price-title">$25/mo</div>
+                                <ul class="pricing-feature mt-20">
+                                    <li>Simultaneous Streams 1</li>
+                                    <li>Download available</li>
+                                    <li>No. of Devices 3</li>
+                                </ul>
+                                <a class="cmn-btn3 text-uppercase mt-30 w-100" href="">
+                                    <div class="btn-wrapper">
+                                        <div class="main-text btn-single">
+                                            get pro
+                                        </div>
+                                        <div class="hover-text btn-single">
+                                            get pro
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                            <div class="pricing-box">
+                                <div class="title">premium </div>
+                                <div class="price-title">$35/mo</div>
+                                <ul class="pricing-feature mt-20">
+                                    <li>Simultaneous Streams 1</li>
+                                    <li>Download available</li>
+                                    <li>No. of Devices 3</li>
+                                </ul>
+                                <a class="cmn-btn3 text-uppercase mt-30 w-100" href="">
+                                    <div class="btn-wrapper">
+                                        <div class="main-text btn-single">
+                                            get pro
+                                        </div>
+                                        <div class="hover-text btn-single">
+                                            get pro
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </main>
-        <!-- End #main -->
     </div>
 
 
@@ -560,10 +444,108 @@
 
 
 
+    <!-- Offcanvas sidebar start -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Product Filter</h5>
+            <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-light fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <div class="row g-4">
+                    <div>
+                        <label for="ProductName" class="form-label">Product Name</label>
+                        <input type="text" class="form-control" id="ProductName">
+                    </div>
+                    <div>
+                        <label for="NumberOfSales" class="form-label">Number of sales</label>
+                        <input type="text" class="form-control" id="NumberOfSales">
+                    </div>
+                    <div id="formModal">
+                        <label class="form-label">status</label>
+                        <select class="modal-select" name="state">
+                            <option value="AL">All status</option>
+                            <option value="AL">Bangladesh</option>
+                            <option value="WY">Australia</option>
+                            <option value="WY">Belarus</option>
+                            <option value="WY">Canada</option>
+                            <option value="WY">China</option>
+                            <option value="WY">France</option>
+                            <option value="WY">Germany</option>
+                            <option value="WY">India</option>
+                            <option value="WY">Indonesia</option>
+                            <option value="WY">Italy</option>
+                            <option value="WY">Japan</option>
+                            <option value="WY">Korea</option>
+                        </select>
+                    </div>
+                    <div class="btn-area">
+                        <button type="submit" class="cmn-btn">Filter</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- Offcanvas sidebar end -->
+
+    <!-- Modal section start -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="staticBackdropLabel">Create Listing</h4>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-light fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label class="form-label">Package</label>
+                            <select class="cmn-select2" name="state">
+                                <option value="AL">Select</option>
+                                <option value="AL">Gold</option>
+                                <option value="WY">Premium</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="firstname" class="form-label">No. of available listing</label>
+                            <input type="text" class="form-control" value="7" id="firstname" readonly>
+                        </div>
+
+                    </div>
 
 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="cmn-btn3" data-bs-dismiss="modal">Close</button>
+                    <a href="add-listing.html" class="cmn-btn">create</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal section end -->
 
 
+    <script>
+        // Copy api key
+        document.getElementById("copyBtn").addEventListener("click", () => {
+            let referralURL = document.getElementById("referralURL");
+            referralURL.select();
+            navigator.clipboard.writeText(referralURL.value)
+            if (referralURL.value) {
+                document.getElementById("copyBtn").innerHTML = '<i class="fa-regular fa-circle-check"></i> Copied';
+                setTimeout(() => {
+                    document.getElementById("copyBtn").innerHTML = '<i class="fa-regular fa-copy"></i>copy';
+                }, 1000)
+            }
+        })
+    </script>
 
 
 
@@ -575,8 +557,16 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- select2_Js_link -->
     <script src="assets/js/select2.min.js"></script>
-    <!-- select2_Js_link -->
+    <!-- Owl carousel Js link -->
     <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Jquery UI Js link -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Jquery Apexcharts Js link -->
+    <script src="assets/js/apexcharts.min.js"></script>
+    <!-- Jquery Apexcharts Js link -->
+    <script src="assets/js/circle-progress.min.js"></script>
+    <!-- Line progressbar Js link -->
+    <script src="assets/js/jquery.lineProgressbar.js"></script>
 
 
     <!-- Main Js slink -->
